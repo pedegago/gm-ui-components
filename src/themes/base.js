@@ -36,7 +36,8 @@ const baseTheme = {
     padding: `${spacingScale(0)} ${spacingScale(1)}`,
     fontWeight: FONT_WEIGHT_CONTROLS,
     border: {
-      activeColor: COLOR_BRAND_PRIMARY
+      activeColor: COLOR_BRAND_PRIMARY,
+      width: spacingScale(0.5)
     }
   },
   button: {},

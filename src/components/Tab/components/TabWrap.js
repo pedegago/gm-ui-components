@@ -1,13 +1,11 @@
-import styled from "styled-components";
-import {
-  COLOR_BRAND_PRIMARY,
-  PADDING_BASE,
-  FONT_WEIGHT_CONTROLS
-} from "../../../style/styleVariables";
+import styled, { css } from "styled-components";
+import { COLOR_BRAND_PRIMARY } from "../../../style/styleVariables";
 
-const activeStyles = `
-    border-color: ${COLOR_BRAND_PRIMARY};
-  `;
+import baseTheme from "../../../themes/base";
+
+const activeStyles = css`
+  border-color: ${props => props.theme.tab.border.activeColor};
+`;
 
 const disabledStyles = `
     cursor: default;
@@ -19,18 +17,17 @@ const hoverStyles = `
     border-color: currentColor;
   `;
 
-const downStyles = `
-    border-color: ${COLOR_BRAND_PRIMARY};
-  `;
+const downStyles = css`
+  border-color: ${props => props.theme.tab.border.activeColor};
+`;
 
 const TabWrap = styled.a.attrs({
   disabled: props => props.disabled
 })`
   flex: 0 0 auto;
-  padding-left: ${PADDING_BASE}px;
-  padding-right: ${PADDING_BASE}px;
-  font-weight: ${FONT_WEIGHT_CONTROLS};
-  border-bottom: 2px solid;
+  padding: ${props => props.theme.tab.padding};
+  font-weight: ${props => props.theme.tab.fontWeight};
+  border-bottom: ${props => props.theme.tab.border.width} solid;
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -47,7 +44,7 @@ const TabWrap = styled.a.attrs({
   // if active...
   ${props =>
     props.active &&
-    `
+    css`
       &,
       &:hover,
       &:active {
@@ -58,7 +55,7 @@ const TabWrap = styled.a.attrs({
   // if disabled...
   ${props =>
     props.disabled &&
-    `
+    css`
       &,
       &:hover,
       &:active {
@@ -66,5 +63,9 @@ const TabWrap = styled.a.attrs({
       }
     `};
 `;
+
+TabWrap.defaultProps = {
+  theme: baseTheme
+};
 
 export default TabWrap;
