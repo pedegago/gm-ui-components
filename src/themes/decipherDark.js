@@ -1,33 +1,14 @@
-import { darken, invert } from "polished";
+import { darken } from "polished";
 import _ from "lodash";
 
 import baseTheme from "./base";
-import { contrastColor, spacingScale } from "../style/styleFunctions";
+import { spacingScale } from "../style/styleFunctions";
 import {
-  COLOR_HIGHLIGHT,
-  COLOR_WHITE,
-  COLOR_BLACK,
   COLOR_DANGER,
   COLOR_WARNING,
   COLOR_INFO,
   COLOR_SUCCESS,
-  FONT_GROUP_SYSTEM,
-  FONT_STACK_CODE,
-  FONT_STACK_DATA_MONO,
-  FONT_STACK_DATA,
-  LINE_HEIGHT_BASE,
-  FONT_WEIGHT_BASE,
-  FONT_WEIGHT_CONTROLS,
-  FONT_SIZE_HERO,
-  FONT_SIZE_LG,
-  FONT_SIZE_BASE,
-  FONT_SIZE_SM,
-  FONT_SIZE_XS,
-  FONT_STACK_BASE,
-  COLOR_CONTENT_BACKGROUND,
-  LINE_HEIGHT_CONTROLS,
-  COLOR_BRAND_PRIMARY,
-  TRANSITION_DURATION_NORMAL
+  COLOR_BRAND_PRIMARY
 } from "../style/styleVariables";
 
 const decipherDark = {
@@ -38,12 +19,12 @@ const decipherDark = {
   },
   button: {
     backgroundColor: {
-      danger: "#000",
-      polling: COLOR_SUCCESS,
-      info: COLOR_INFO,
-      warning: COLOR_WARNING,
-      primary: COLOR_BRAND_PRIMARY,
-      default: COLOR_BRAND_PRIMARY
+      danger: darken(0.2, COLOR_DANGER),
+      polling: darken(0.2, COLOR_SUCCESS),
+      info: darken(0.2, COLOR_INFO),
+      warning: darken(0.2, COLOR_WARNING),
+      primary: darken(0.2, COLOR_BRAND_PRIMARY),
+      default: darken(0.2, COLOR_BRAND_PRIMARY)
     }
   }
 };

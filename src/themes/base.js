@@ -66,6 +66,4 @@ const baseTheme = {
   tooltip: {}
 };
 
-console.log(baseTheme);
-
 export default baseTheme;
