@@ -45,6 +45,8 @@ export const FONT_STACK_DATA_MONO = `${FONT_GROUP_DATA_MONO}, ${FONT_GROUP_DATA}
 export const FONT_STACK_CODE = FONT_GROUP_CODE;
 
 export const LINE_HEIGHT_BASE = 1.4;
+export const LINE_HEIGHT_CONTROLS = 1.2;
+
 export const FONT_WEIGHT_BASE = 400;
 export const FONT_WEIGHT_CONTROLS = 600;
 export const FONT_SIZE_HERO = "32px";
@@ -52,3 +54,8 @@ export const FONT_SIZE_LG = "18px";
 export const FONT_SIZE_BASE = "14px";
 export const FONT_SIZE_SM = "11px";
 export const FONT_SIZE_XS = "9px";
+
+export const TRANSITION_NORMAL = "all .15s ease";
+export const TRANSITION_DURATION_NORMAL = ".15s";
+export const TRANSITION_DELAY = "0";
+export const TRANSITION_TIMING_FUNCTION = "ease";

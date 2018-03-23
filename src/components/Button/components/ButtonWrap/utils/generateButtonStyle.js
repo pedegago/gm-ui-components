@@ -5,6 +5,11 @@ import {
   contrastColor
 } from "../../../../../style/styleFunctions";
 
+import {
+  COLOR_BRAND_PRIMARY,
+  COLOR_WHITE
+} from "../../../../../style/styleVariables";
+
 /**
  * Utility function that transforms an object containing different attributes
  * into a block of CSS attributes dealing with buton styles
@@ -30,9 +35,9 @@ import {
 function generateButtonStyle(
   theme,
   {
-    buttonBackgroundColorBase = theme.colorBackground,
-    buttonBorderColorBase = theme.colorBackground,
-    buttonLabelColorBase = contrastColor(theme.colorBackground, 1),
+    buttonBackgroundColorBase = COLOR_WHITE,
+    buttonBorderColorBase = COLOR_WHITE,
+    buttonLabelColorBase = contrastColor(COLOR_WHITE, 1),
     buttonActiveStatus = false,
     buttonOutlineStyle = "raisedOutline",
     buttonOutlineStyleDepth = 0.06, // 0-100% // default: 6%,
@@ -41,11 +46,8 @@ function generateButtonStyle(
     buttonHoverReactionDegree = 0.06 * 0.25,
     buttonActiveReactionDegree = 0.06 * 2,
     buttonDownReactionDegree = 0.06,
-    buttonActiveMixBaseColor = theme.colorIntentHighlight,
-    buttonActiveMixBaseLabelColor = contrastColor(
-      theme.colorIntentHighlight,
-      1
-    ),
+    buttonActiveMixBaseColor = COLOR_BRAND_PRIMARY,
+    buttonActiveMixBaseLabelColor = contrastColor(COLOR_BRAND_PRIMARY, 1),
     buttonActiveMixDegree = 1 //default 100%
   }
 ) {

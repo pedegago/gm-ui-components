@@ -7,24 +7,25 @@ import generateButtonOrientation from "./utils/generateButtonOrientation";
 import generateButtonSize from "./utils/generateButtonSize";
 import generateButtonStyle from "./utils/generateButtonStyle";
 import baseTheme from "../../../../themes/base";
+
 import { FONT_STACK_BASE } from "../../../../style/styleVariables";
 
 // Maps button types to a particular color
 function generateButtonTypeColor(type, theme) {
   switch (type) {
     case "danger":
-      return theme.colorIntentDanger;
+      return theme.button.backgroundColor.danger;
     case "info":
-      return theme.colorIntentInfo;
+      return theme.button.backgroundColor.info;
     case "warning":
-      return theme.colorIntentWarning;
+      return theme.button.backgroundColor.warning;
     case "polling":
-      return theme.colorIntentHighlight;
+      return theme.button.backgroundColor.polling;
     case "primary":
-      return theme.colorIntentSuccess;
+      return theme.button.backgroundColor.primary;
     case "default":
     default:
-      return theme.colorBackground;
+      return theme.button.backgroundColor.default;
   }
 }
 
@@ -38,20 +39,17 @@ const camelCaseConverter = stringInput => {
 
 // The start of the CSS style output
 const ButtonWrap = styled.button`
-  font-family: ${props => props.theme.fontStackNormal};
-  font-weight: ${props => props.theme.fontWeightControls};
-  line-height: ${props => props.theme.lineHeightControls};
+  font-family: ${props => props.theme.button.fontFamily};
+  font-weight: ${props => props.theme.button.fontWeight};
+  line-height: ${props => props.theme.button.lineHeight};
   transition: ${props => props.theme.transitionNormal};
   transition-duration: ${parseInt(
-    props => props.theme.transitionDurationNormal,
+    props => props.theme.button.transitionDuration,
     10
   ) * 2};
   box-sizing: border-box;
   user-select: none;
-  font-family: ${FONT_STACK_BASE};
-  font-weight: 600;
   border-width: 1px;
-  line-height: 1.4;
   border-style: solid;
   text-transform: none;
   text-align: center;
@@ -59,7 +57,6 @@ const ButtonWrap = styled.button`
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  transition: all 0.3s ease;
 
   &:hover {
     transition: all 0.1s ease;

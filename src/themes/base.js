@@ -18,8 +18,11 @@ import {
   FONT_SIZE_BASE,
   FONT_SIZE_SM,
   FONT_SIZE_XS,
+  FONT_STACK_BASE,
   COLOR_CONTENT_BACKGROUND,
-  COLOR_BRAND_PRIMARY
+  LINE_HEIGHT_CONTROLS,
+  COLOR_BRAND_PRIMARY,
+  TRANSITION_DURATION_NORMAL
 } from "../style/styleVariables";
 import { contrastColor, spacingScale } from "../style/styleFunctions";
 
@@ -40,7 +43,20 @@ const baseTheme = {
       width: spacingScale(0.5)
     }
   },
-  button: {},
+  button: {
+    fontFamily: FONT_STACK_BASE,
+    fontWeight: FONT_WEIGHT_CONTROLS,
+    lineHeight: LINE_HEIGHT_CONTROLS,
+    transitionDuration: TRANSITION_DURATION_NORMAL,
+    backgroundColor: {
+      danger: COLOR_DANGER,
+      polling: COLOR_SUCCESS,
+      info: COLOR_INFO,
+      warning: COLOR_WARNING,
+      primary: COLOR_BRAND_PRIMARY,
+      default: COLOR_BRAND_PRIMARY
+    }
+  },
   buttonGroup: {},
   checkbox: {},
   glyphs: {},
@@ -49,5 +65,7 @@ const baseTheme = {
   tabGroup: {},
   tooltip: {}
 };
+
+console.log(baseTheme);
 
 export default baseTheme;
