@@ -3,10 +3,10 @@ export const COLOR_BRAND_PRIMARY = "#0aab2a";
 export const COLOR_BRAND_SECONDARY = "#002e6e";
 
 export const COLOR_RED = "#E4251A";
-export const COLOR_BLACK = "#000";
+export const COLOR_BLACK = "#000000";
 export const COLOR_GREEN = "#0aab2a";
-export const COLOR_WHITE = "#fff";
-export const COLOR_GREY = "#444";
+export const COLOR_WHITE = "#ffffff";
+export const COLOR_GREY = "#444444";
 
 export const COLOR_HIGHLIGHT = COLOR_BRAND_PRIMARY;
 export const COLOR_SUCCESS = COLOR_BRAND_PRIMARY;

@@ -17,49 +17,36 @@ import {
   FONT_SIZE_LG,
   FONT_SIZE_BASE,
   FONT_SIZE_SM,
-  FONT_SIZE_XS
+  FONT_SIZE_XS,
+  COLOR_CONTENT_BACKGROUND,
+  COLOR_BRAND_PRIMARY
 } from "../style/styleVariables";
+import { contrastColor, spacingScale } from "../style/styleFunctions";
 
 const baseTheme = {
-  colorBrandPrimary: "#094dff", // Apple blue
-  colorBrandSecondary: "#eb0035", // Apple pink
-
-  colorIntentHighlight: COLOR_HIGHLIGHT,
-  colorIntentDanger: COLOR_DANGER,
-  colorIntentWarning: COLOR_WARNING,
-  colorIntentInfo: COLOR_INFO,
-  colorIntentSuccess: COLOR_SUCCESS,
-
-  colorBackground: COLOR_WHITE,
-  colorContent: COLOR_BLACK,
-
-  spacing: "8px",
-  borderRadiusNormal: "6px",
-
-  fontSizeNormal: FONT_SIZE_BASE,
-  fontSizeXs: FONT_SIZE_XS,
-  fontSizeSm: FONT_SIZE_SM,
-  fontSizeLg: FONT_SIZE_LG,
-  fontSizeXl: "32px",
-  fontSizeHero: FONT_SIZE_HERO,
-
-  lineHeightNormal: LINE_HEIGHT_BASE,
-  lineHeightHeading: "1.1",
-  lineHeightControls: "1.2",
-
-  fontWeightNormal: FONT_WEIGHT_BASE,
-  fontWeightHeadings: FONT_WEIGHT_BASE + 100,
-  fontWeightControls: FONT_WEIGHT_CONTROLS,
-
-  fontStackNormal: FONT_GROUP_SYSTEM,
-  fontStackCode: FONT_STACK_CODE,
-  fontStackData: FONT_STACK_DATA_MONO,
-  fontStackDataMono: FONT_STACK_DATA,
-
-  transitionDurationNormal: ".15s",
-  transitionTimingFunction: "ease",
-  transitionDelay: "0",
-  transitionNormal: "all .15s ease"
+  footer: {
+    color: contrastColor(COLOR_CONTENT_BACKGROUND, 1),
+    padding: spacingScale(0.5),
+    background: COLOR_CONTENT_BACKGROUND
+  },
+  breadcrumbs: {
+    color: COLOR_BLACK
+  },
+  tab: {
+    padding: `${spacingScale(0)} ${spacingScale(1)}`,
+    fontWeight: FONT_WEIGHT_CONTROLS,
+    border: {
+      activeColor: COLOR_BRAND_PRIMARY
+    }
+  },
+  button: {},
+  buttonGroup: {},
+  checkbox: {},
+  glyphs: {},
+  icon: {},
+  input: {},
+  tabGroup: {},
+  tooltip: {}
 };
 
 export default baseTheme;

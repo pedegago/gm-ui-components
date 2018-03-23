@@ -5,7 +5,6 @@ import baseTheme from "../../themes/base.js";
 import decipherDark from "../../themes/decipherDark.js";
 
 export default function ThemeDecorator({ children, storyTheme }) {
-  console.log(storyTheme);
   switch (storyTheme) {
     case "decipherDark":
       storyTheme = decipherDark;
