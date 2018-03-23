@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { transparentize } from 'polished';
+import { transparentize } from "polished";
 
 import { contrastColor, spacingScale } from "../../../style/styleFunctions";
 import {
@@ -8,19 +8,20 @@ import {
   APP_FOOTER_HEIGHT,
   ZINDEX_STICKY
 } from "../../../style/styleVariables";
+import baseTheme from "../../../themes/base";
 
 const Footer = styled.footer`
   user-select: none;
   overflow: hidden;
-  padding: ${spacingScale(0.5)};
+  padding: ${props => props.theme.footer.padding};
   display: flex;
   flex-flow: row wrap;
-  color: ${contrastColor(COLOR_CONTENT_BACKGROUND, 0.8)};
-  background-image: linear-gradient(
+  color: ${props => props.theme.footer.color};
+  background-image: ${props => `linear-gradient(
     to bottom,
-    ${transparentize(1, COLOR_CONTENT_BACKGROUND)},
-    ${COLOR_CONTENT_BACKGROUND}
-  );
+    ${transparentize(1, props.theme.footer.background)},
+    ${props.theme.footer.background}
+  )`};
   font-size: ${FONT_SIZE_BASE};
   height: auto;
   align-items: stretch;
@@ -42,5 +43,9 @@ const Footer = styled.footer`
     }
   }
 `;
+
+Footer.defaultProps = {
+  theme: baseTheme
+};
 
 export default Footer;
