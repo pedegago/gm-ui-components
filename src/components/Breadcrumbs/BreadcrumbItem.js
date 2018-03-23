@@ -2,11 +2,13 @@ import PropTypes from "prop-types";
 import React from "react";
 import styled from "styled-components";
 
+import baseTheme from "../../themes/base";
+
 export const Breadcrumb = styled.li`
   flex: 0 0 auto;
   display: flex;
   align-items: center;
-  color: black;
+  color: ${props => props.theme.breadcrumbs.color};
   &:before {
     content: ">";
     transform: scaleX(0.5);
@@ -23,7 +25,7 @@ export const Breadcrumb = styled.li`
     color: inherit;
     text-decoration: none;
     &:hover {
-      color: black;
+      color: ${props => props.theme.breadcrumbs.hoverColor};
     }
   }
   &:first-child {
@@ -56,4 +58,8 @@ export default function BreadcrumbItem({ item, expand }) {
 BreadcrumbItem.propTypes = {
   expand: PropTypes.func,
   item: PropTypes.string.isRequired
+};
+
+BreadcrumbItem.defaultProps = {
+  theme: baseTheme
 };
