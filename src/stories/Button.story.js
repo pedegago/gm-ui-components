@@ -68,33 +68,34 @@ const sizes = ["normal", "xs", "sm", "lg", "xl"];
 const orientations = ["vertical", "horizontal"];
 
 storiesOf("Button", module)
-  .addDecorator(ThemeDecorator)
   .addDecorator(withKnobs)
   .add(
     "default",
     withInfo(
       "A React component that renders a button and includes base styling, used to trigger actions."
     )(() => (
-      <Button
-        active={boolean("active", false)}
-        label={text("label", "Hello World")}
-        type={select("type", types, "default")}
-        glyph={select("glyph", glyphNames)}
-        glyphColor={color("glyphColor")}
-        glyphSize={select("glyphSize", sizes)}
-        disabled={boolean("disabled", false)}
-        clickAction={() => alert("clicked")}
-        orientation={select("orientation", orientations, "horizontal")}
-        outline={select("outline", outlines, "none")}
-        prefix={text("prefix")}
-        suffix={text("suffix")}
-        size={select("size", sizes, "normal")}
-        tabIndex={number("tabIndex")}
-      />
+      <ThemeDecorator storyTheme={select("Theme", ["base", "decipherDark"])}>
+        <Button
+          active={boolean("active", false)}
+          label={text("label", "Hello World")}
+          type={select("type", types, "default")}
+          glyph={select("glyph", glyphNames)}
+          glyphColor={color("glyphColor")}
+          glyphSize={select("glyphSize", sizes)}
+          disabled={boolean("disabled", false)}
+          clickAction={() => alert("clicked")}
+          orientation={select("orientation", orientations, "horizontal")}
+          outline={select("outline", outlines, "none")}
+          prefix={text("prefix")}
+          suffix={text("suffix")}
+          size={select("size", sizes, "normal")}
+          tabIndex={number("tabIndex")}
+        />
+      </ThemeDecorator>
     ))
   )
   .add("types", () => (
-    <Fragment>
+    <ThemeDecorator storyTheme={select("Theme", ["base", "decipherDark"])}>
       {types.map(type => (
         <Button
           type={type}
@@ -104,17 +105,17 @@ storiesOf("Button", module)
           clickAction={() => {}}
         />
       ))}
-    </Fragment>
+    </ThemeDecorator>
   ))
   .add("sizes", () => (
-    <Fragment>
+    <ThemeDecorator storyTheme={select("Theme", ["base", "decipherDark"])}>
       {sizes.map(size => (
         <Button size={size} label={size} key={size} clickAction={() => {}} />
       ))}
-    </Fragment>
+    </ThemeDecorator>
   ))
   .add("outlines", () => (
-    <Fragment>
+    <ThemeDecorator storyTheme={select("Theme", ["base", "decipherDark"])}>
       {outlines.map(outline => (
         <Button
           outline={outline}
@@ -123,10 +124,10 @@ storiesOf("Button", module)
           clickAction={() => {}}
         />
       ))}
-    </Fragment>
+    </ThemeDecorator>
   ))
   .add("orientations", () => (
-    <Fragment>
+    <ThemeDecorator storyTheme={select("Theme", ["base", "decipherDark"])}>
       {orientations.map(orientation => (
         <Button
           glyph={"Bell"}
@@ -136,5 +137,5 @@ storiesOf("Button", module)
           key={orientation}
         />
       ))}
-    </Fragment>
+    </ThemeDecorator>
   ));

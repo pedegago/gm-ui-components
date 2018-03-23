@@ -1,9 +1,21 @@
-import React from "react";
+import React, { Fragment } from "react";
 import { ThemeProvider } from "styled-components";
 
 import baseTheme from "../../themes/base.js";
+import decipherDark from "../../themes/decipherDark.js";
 
-export default function ThemeDecorator(story) {
-  const content = story();
-  return <ThemeProvider theme={baseTheme}>{content}</ThemeProvider>;
+export default function ThemeDecorator({ children, storyTheme }) {
+  console.log(storyTheme);
+  switch (storyTheme) {
+    case "decipherDark":
+      storyTheme = decipherDark;
+      break;
+    default:
+      storyTheme = baseTheme;
+  }
+  return (
+    <ThemeProvider theme={storyTheme}>
+      <Fragment>{children}</Fragment>
+    </ThemeProvider>
+  );
 }
