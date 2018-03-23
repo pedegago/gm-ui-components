@@ -1,8 +1,9 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
-import { withKnobs, array, number } from "@storybook/addon-knobs/react";
+import { withKnobs, array, number, select } from "@storybook/addon-knobs/react";
 import { Breadcrumbs } from "../components";
 import { withInfo } from "@storybook/addon-info";
+import ThemeDecorator from "./utils/ThemeDecorator";
 
 const stories = storiesOf("Breadcrumbs", module);
 const label = "Breadcrumbs";
@@ -19,7 +20,12 @@ stories.add(
   "simple breadcrumbs",
   withInfo(breadCrumbsInfo)(() => {
     crumbs = array(label, defaultCrumbs, separator);
-    return <Breadcrumbs crumbs={crumbs} />;
+    return (
+      <ThemeDecorator storyTheme={select("Theme", ["base", "decipherDark"])}>
+        {" "}
+        <Breadcrumbs crumbs={crumbs} />
+      </ThemeDecorator>
+    );
   })
 );
 
@@ -28,6 +34,10 @@ stories.add(
   withInfo(breadCrumbsInfo)(() => {
     crumbs = array(label, defaultCrumbs, separator);
     maxItems = number("Max Items", 3);
-    return <Breadcrumbs crumbs={crumbs} maxItems={maxItems} />;
+    return (
+      <ThemeDecorator storyTheme={select("Theme", ["base", "decipherDark"])}>
+        <Breadcrumbs crumbs={crumbs} maxItems={maxItems} />
+      </ThemeDecorator>
+    );
   })
 );
