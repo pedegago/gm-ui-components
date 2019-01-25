@@ -58,7 +58,8 @@
     "ecmaFeatures": {
       "jsx": true,
       "experimentalObjectRestSpread": true,
-      "modules": true
+      "modules": true,
+      "experimentalDecorators": true
     }
   },
   "plugins": ["react", "prettier"]
