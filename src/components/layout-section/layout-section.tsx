@@ -6,19 +6,20 @@ import { Component, Prop } from "@stencil/core";
   shadow: true
 })
 export class LayoutSection {
-  @Prop() childEls: HTMLElement = <div>Layout section content goes here</div>;
   @Prop() sectionTitle: string = "Test Title";
-  @Prop() icon: Function;
+
   render() {
     return (
       <div id="wrapper">
         {this.sectionTitle && (
           <header>
-            {this.icon && <span id="icon">{this.icon()}</span>}
-            <span>{this.sectionTitle}</span>
+            <slot name="icon" />
+            <h3>{this.sectionTitle}</h3>
           </header>
         )}
-        <div id="content">{this.childEls}</div>
+        <div id="content">
+          <slot />
+        </div>
       </div>
     );
   }

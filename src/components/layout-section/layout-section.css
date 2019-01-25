@@ -21,7 +21,23 @@
   flex: 1 0 auto;
 }
 
-span#icon {
+header {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  padding: 0 8px 0;
+  width: 100%;
+  flex: 0 0 24px;
+}
+
+h3 {
+  color: inherit;
+  font-size: var(--FONT-SIZE-BASE);
+  font-weight: var(--FONT-WEIGHT-SEMIBOLD);
+  margin: 0;
+}
+
+::slotted(span) {
   flex: 0 0 auto;
   padding-right: 4px !important;
 }
