@@ -9,28 +9,28 @@ module.exports = {
   entry: "./src/components/index.js",
   resolve: {
     modules: [path.resolve(__dirname, "src"), "node_modules"],
-    extensions: [".json", ".js"]
+    extensions: [".json", ".js", ".tsx", ".ts"],
   },
   target: "node",
   output: {
     path: path.resolve(__dirname, "lib"),
     filename: "build.js",
     libraryTarget: "umd",
-    library: "gm-ui-components"
+    library: "gm-ui-components",
   },
-  externals: {
-    react: "react",
-    "react-dom": "react-dom",
-    "styled-components": "styled-components"
-  },
+  // externals: {
+  //   react: "react",
+  //   "react-dom": "react-dom",
+  //   "styled-components": "styled-components",
+  // },
   module: {
     rules: [
       {
         use: {
-          loader: "babel-loader"
+          loader: "babel-loader",
         },
-        test: /\.js$/,
-        exclude: /node_modules/
+        test: /\.(js|ts|tsx)$/,
+        exclude: /node_modules/,
       },
       {
         test: /\.(eot|png|jpg|jpeg|gif|ttf|woff|woff2)$/,
@@ -41,10 +41,10 @@ module.exports = {
               // Images larger than 10 KB won’t be inlined
               // If the file is greater than the limit, file-loader is used by default and all query parameters are passed to it.
               // Using an alternative to file-loader is enabled via the fallback option.
-              limit: 10 * 1024
-            }
-          }
-        ]
+              limit: 10 * 1024,
+            },
+          },
+        ],
       },
       {
         test: /\.svg$/,
@@ -52,10 +52,10 @@ module.exports = {
           {
             loader: "@svgr/webpack",
             options: {
-              configFile: path.resolve(__dirname, "config", "svgr.config.js")
-            }
-          }
-        ]
+              configFile: path.resolve(__dirname, "config", "svgr.config.js"),
+            },
+          },
+        ],
       },
       {
         test: /\.(css|scss|less)$/,
@@ -64,11 +64,11 @@ module.exports = {
           {
             loader: "css-loader",
             options: {
-              importLoaders: 1
+              importLoaders: 1,
               // sourceMap currently disabled due to a runtime overhead in
               // development; a noticeable flicker is observed applying CSS
               // sourceMap: true
-            }
+            },
           },
           "resolve-url-loader",
           {
@@ -80,14 +80,14 @@ module.exports = {
               plugins: () => [
                 require("postcss-flexbugs-fixes"),
                 autoprefixer({
-                  flexbox: "no-2009"
-                })
-              ]
-            }
-          }
-        ]
-      }
-    ]
+                  flexbox: "no-2009",
+                }),
+              ],
+            },
+          },
+        ],
+      },
+    ],
   },
-  plugins: [new BundleAnalyzerPlugin({ analyzerMode: "static" })]
+  plugins: [new BundleAnalyzerPlugin({ analyzerMode: "static" })],
 };
