@@ -30,6 +30,45 @@ export namespace Components {
   interface GmUiErrorCard {}
   interface GmUiErrorCardAttributes extends StencilHTMLAttributes {}
 
+  interface GmUiFieldset {}
+  interface GmUiFieldsetAttributes extends StencilHTMLAttributes {}
+
+  interface GmUiInputBox {}
+  interface GmUiInputBoxAttributes extends StencilHTMLAttributes {}
+
+  interface GmUiInputHint {}
+  interface GmUiInputHintAttributes extends StencilHTMLAttributes {}
+
+  interface GmUiInputLabel {}
+  interface GmUiInputLabelAttributes extends StencilHTMLAttributes {}
+
+  interface GmUiInputText {}
+  interface GmUiInputTextAttributes extends StencilHTMLAttributes {}
+
+  interface GmUiInputWrap {}
+  interface GmUiInputWrapAttributes extends StencilHTMLAttributes {}
+
+  interface GmUiTextArea {}
+  interface GmUiTextAreaAttributes extends StencilHTMLAttributes {}
+
+  interface GmUiCheckbox {}
+  interface GmUiCheckboxAttributes extends StencilHTMLAttributes {}
+
+  interface GmUiInputField {}
+  interface GmUiInputFieldAttributes extends StencilHTMLAttributes {}
+
+  interface GmUiInputRange {}
+  interface GmUiInputRangeAttributes extends StencilHTMLAttributes {}
+
+  interface GmUiRadio {}
+  interface GmUiRadioAttributes extends StencilHTMLAttributes {}
+
+  interface GmUiSelect {}
+  interface GmUiSelectAttributes extends StencilHTMLAttributes {}
+
+  interface GmUiTextarea {}
+  interface GmUiTextareaAttributes extends StencilHTMLAttributes {}
+
   interface GmUiLayoutSection {}
   interface GmUiLayoutSectionAttributes extends StencilHTMLAttributes {}
 
@@ -69,6 +108,19 @@ declare global {
     'GmUiButtonGroup': Components.GmUiButtonGroup;
     'GmUiButton': Components.GmUiButton;
     'GmUiErrorCard': Components.GmUiErrorCard;
+    'GmUiFieldset': Components.GmUiFieldset;
+    'GmUiInputBox': Components.GmUiInputBox;
+    'GmUiInputHint': Components.GmUiInputHint;
+    'GmUiInputLabel': Components.GmUiInputLabel;
+    'GmUiInputText': Components.GmUiInputText;
+    'GmUiInputWrap': Components.GmUiInputWrap;
+    'GmUiTextArea': Components.GmUiTextArea;
+    'GmUiCheckbox': Components.GmUiCheckbox;
+    'GmUiInputField': Components.GmUiInputField;
+    'GmUiInputRange': Components.GmUiInputRange;
+    'GmUiRadio': Components.GmUiRadio;
+    'GmUiSelect': Components.GmUiSelect;
+    'GmUiTextarea': Components.GmUiTextarea;
     'GmUiLayoutSection': Components.GmUiLayoutSection;
     'GmUiNavCardGroup': Components.GmUiNavCardGroup;
     'GmUiNavCard': Components.GmUiNavCard;
@@ -88,6 +140,19 @@ declare global {
     'gm-ui-button-group': Components.GmUiButtonGroupAttributes;
     'gm-ui-button': Components.GmUiButtonAttributes;
     'gm-ui-error-card': Components.GmUiErrorCardAttributes;
+    'gm-ui-fieldset': Components.GmUiFieldsetAttributes;
+    'gm-ui-input-box': Components.GmUiInputBoxAttributes;
+    'gm-ui-input-hint': Components.GmUiInputHintAttributes;
+    'gm-ui-input-label': Components.GmUiInputLabelAttributes;
+    'gm-ui-input-text': Components.GmUiInputTextAttributes;
+    'gm-ui-input-wrap': Components.GmUiInputWrapAttributes;
+    'gm-ui-text-area': Components.GmUiTextAreaAttributes;
+    'gm-ui-checkbox': Components.GmUiCheckboxAttributes;
+    'gm-ui-input-field': Components.GmUiInputFieldAttributes;
+    'gm-ui-input-range': Components.GmUiInputRangeAttributes;
+    'gm-ui-radio': Components.GmUiRadioAttributes;
+    'gm-ui-select': Components.GmUiSelectAttributes;
+    'gm-ui-textarea': Components.GmUiTextareaAttributes;
     'gm-ui-layout-section': Components.GmUiLayoutSectionAttributes;
     'gm-ui-nav-card-group': Components.GmUiNavCardGroupAttributes;
     'gm-ui-nav-card': Components.GmUiNavCardAttributes;
@@ -135,6 +200,84 @@ declare global {
   var HTMLGmUiErrorCardElement: {
     prototype: HTMLGmUiErrorCardElement;
     new (): HTMLGmUiErrorCardElement;
+  };
+
+  interface HTMLGmUiFieldsetElement extends Components.GmUiFieldset, HTMLStencilElement {}
+  var HTMLGmUiFieldsetElement: {
+    prototype: HTMLGmUiFieldsetElement;
+    new (): HTMLGmUiFieldsetElement;
+  };
+
+  interface HTMLGmUiInputBoxElement extends Components.GmUiInputBox, HTMLStencilElement {}
+  var HTMLGmUiInputBoxElement: {
+    prototype: HTMLGmUiInputBoxElement;
+    new (): HTMLGmUiInputBoxElement;
+  };
+
+  interface HTMLGmUiInputHintElement extends Components.GmUiInputHint, HTMLStencilElement {}
+  var HTMLGmUiInputHintElement: {
+    prototype: HTMLGmUiInputHintElement;
+    new (): HTMLGmUiInputHintElement;
+  };
+
+  interface HTMLGmUiInputLabelElement extends Components.GmUiInputLabel, HTMLStencilElement {}
+  var HTMLGmUiInputLabelElement: {
+    prototype: HTMLGmUiInputLabelElement;
+    new (): HTMLGmUiInputLabelElement;
+  };
+
+  interface HTMLGmUiInputTextElement extends Components.GmUiInputText, HTMLStencilElement {}
+  var HTMLGmUiInputTextElement: {
+    prototype: HTMLGmUiInputTextElement;
+    new (): HTMLGmUiInputTextElement;
+  };
+
+  interface HTMLGmUiInputWrapElement extends Components.GmUiInputWrap, HTMLStencilElement {}
+  var HTMLGmUiInputWrapElement: {
+    prototype: HTMLGmUiInputWrapElement;
+    new (): HTMLGmUiInputWrapElement;
+  };
+
+  interface HTMLGmUiTextAreaElement extends Components.GmUiTextArea, HTMLStencilElement {}
+  var HTMLGmUiTextAreaElement: {
+    prototype: HTMLGmUiTextAreaElement;
+    new (): HTMLGmUiTextAreaElement;
+  };
+
+  interface HTMLGmUiCheckboxElement extends Components.GmUiCheckbox, HTMLStencilElement {}
+  var HTMLGmUiCheckboxElement: {
+    prototype: HTMLGmUiCheckboxElement;
+    new (): HTMLGmUiCheckboxElement;
+  };
+
+  interface HTMLGmUiInputFieldElement extends Components.GmUiInputField, HTMLStencilElement {}
+  var HTMLGmUiInputFieldElement: {
+    prototype: HTMLGmUiInputFieldElement;
+    new (): HTMLGmUiInputFieldElement;
+  };
+
+  interface HTMLGmUiInputRangeElement extends Components.GmUiInputRange, HTMLStencilElement {}
+  var HTMLGmUiInputRangeElement: {
+    prototype: HTMLGmUiInputRangeElement;
+    new (): HTMLGmUiInputRangeElement;
+  };
+
+  interface HTMLGmUiRadioElement extends Components.GmUiRadio, HTMLStencilElement {}
+  var HTMLGmUiRadioElement: {
+    prototype: HTMLGmUiRadioElement;
+    new (): HTMLGmUiRadioElement;
+  };
+
+  interface HTMLGmUiSelectElement extends Components.GmUiSelect, HTMLStencilElement {}
+  var HTMLGmUiSelectElement: {
+    prototype: HTMLGmUiSelectElement;
+    new (): HTMLGmUiSelectElement;
+  };
+
+  interface HTMLGmUiTextareaElement extends Components.GmUiTextarea, HTMLStencilElement {}
+  var HTMLGmUiTextareaElement: {
+    prototype: HTMLGmUiTextareaElement;
+    new (): HTMLGmUiTextareaElement;
   };
 
   interface HTMLGmUiLayoutSectionElement extends Components.GmUiLayoutSection, HTMLStencilElement {}
@@ -204,6 +347,19 @@ declare global {
     'gm-ui-button-group': HTMLGmUiButtonGroupElement
     'gm-ui-button': HTMLGmUiButtonElement
     'gm-ui-error-card': HTMLGmUiErrorCardElement
+    'gm-ui-fieldset': HTMLGmUiFieldsetElement
+    'gm-ui-input-box': HTMLGmUiInputBoxElement
+    'gm-ui-input-hint': HTMLGmUiInputHintElement
+    'gm-ui-input-label': HTMLGmUiInputLabelElement
+    'gm-ui-input-text': HTMLGmUiInputTextElement
+    'gm-ui-input-wrap': HTMLGmUiInputWrapElement
+    'gm-ui-text-area': HTMLGmUiTextAreaElement
+    'gm-ui-checkbox': HTMLGmUiCheckboxElement
+    'gm-ui-input-field': HTMLGmUiInputFieldElement
+    'gm-ui-input-range': HTMLGmUiInputRangeElement
+    'gm-ui-radio': HTMLGmUiRadioElement
+    'gm-ui-select': HTMLGmUiSelectElement
+    'gm-ui-textarea': HTMLGmUiTextareaElement
     'gm-ui-layout-section': HTMLGmUiLayoutSectionElement
     'gm-ui-nav-card-group': HTMLGmUiNavCardGroupElement
     'gm-ui-nav-card': HTMLGmUiNavCardElement
@@ -223,6 +379,19 @@ declare global {
     'gm-ui-button-group': HTMLGmUiButtonGroupElement;
     'gm-ui-button': HTMLGmUiButtonElement;
     'gm-ui-error-card': HTMLGmUiErrorCardElement;
+    'gm-ui-fieldset': HTMLGmUiFieldsetElement;
+    'gm-ui-input-box': HTMLGmUiInputBoxElement;
+    'gm-ui-input-hint': HTMLGmUiInputHintElement;
+    'gm-ui-input-label': HTMLGmUiInputLabelElement;
+    'gm-ui-input-text': HTMLGmUiInputTextElement;
+    'gm-ui-input-wrap': HTMLGmUiInputWrapElement;
+    'gm-ui-text-area': HTMLGmUiTextAreaElement;
+    'gm-ui-checkbox': HTMLGmUiCheckboxElement;
+    'gm-ui-input-field': HTMLGmUiInputFieldElement;
+    'gm-ui-input-range': HTMLGmUiInputRangeElement;
+    'gm-ui-radio': HTMLGmUiRadioElement;
+    'gm-ui-select': HTMLGmUiSelectElement;
+    'gm-ui-textarea': HTMLGmUiTextareaElement;
     'gm-ui-layout-section': HTMLGmUiLayoutSectionElement;
     'gm-ui-nav-card-group': HTMLGmUiNavCardGroupElement;
     'gm-ui-nav-card': HTMLGmUiNavCardElement;
