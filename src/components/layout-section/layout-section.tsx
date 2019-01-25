@@ -1,50 +1,26 @@
-import { Component } from "@stencil/core";
+import { Component, Prop } from "@stencil/core";
 
 @Component({
   tag: "gm-ui-layout-section",
-  styleUrl: "./layout-section.css",
+  styleUrls: ["../../style/styleVariables.css", "./layout-section.css"],
   shadow: true
 })
 export class LayoutSection {
+  @Prop() sectionTitle: string = "Test Title";
+
   render() {
-    return <div>LayoutSection</div>;
+    return (
+      <div id="wrapper">
+        {this.sectionTitle && (
+          <header>
+            <slot name="icon" />
+            <h3>{this.sectionTitle}</h3>
+          </header>
+        )}
+        <div id="content">
+          <slot />
+        </div>
+      </div>
+    );
   }
 }
-
-// import React from "react";
-// import { PropTypes } from "prop-types";
-
-// import LayoutSectionWrap from "./components/LayoutSectionWrap";
-// import Header from "./components/Header";
-// import SectionContent from "./components/SectionContent";
-// import SectionIcon from "./components/SectionIcon";
-// import SectionTitle from "./components/SectionTitle";
-
-// LayoutSection.propTypes = {
-//   children: PropTypes.oneOfType([PropTypes.array, PropTypes.object]),
-//   className: PropTypes.string,
-//   icon: PropTypes.func,
-//   title: PropTypes.string.isRequired
-// };
-
-// /**
-//  * A Layout component that renders an html section with a header
-//  * @param {Object} props - refer to propTypes
-//  */
-// function LayoutSection({ children, title, icon, ...props }) {
-//   return (
-//     <LayoutSectionWrap {...props}>
-//       {title && (
-//         <Header>
-//           {icon && <SectionIcon>{icon()}</SectionIcon>}
-//           <SectionTitle>{title}</SectionTitle>
-//         </Header>
-//       )}
-//       <SectionContent>{children}</SectionContent>
-//     </LayoutSectionWrap>
-//   );
-// }
-
-// LayoutSection.displayName = "LayoutSection";
-
-// export default LayoutSection;

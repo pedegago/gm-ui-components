@@ -1,0 +1,66 @@
+* {
+  --COLOR-BRAND-A: #0aab2a;
+  --COLOR-BRAND-B: #0aab2a;
+  --COLOR-CONTENT: #000;
+
+  --COLOR-BACKGROUND-A: #fff;
+  --COLOR-BACKGROUND-B: #f8f8f8;
+  --COLOR-BACKGROUND-C: #000;
+
+  --COLOR-INTENT-HIGHLIGHT: var(--COLOR-BRAND-A);
+  --COLOR-INTENT-SUCCESS: var(--COLOR-BRAND-A);
+  --COLOR-INTENT-DANGER: #d83d22;
+  --COLOR-INTENT-WARNING: #f7cd45;
+  --COLOR-INTENT-INFO: #1e6df6;
+
+  --COLOR-KEYLINE: rgba(0, 0, 0, 0.08);
+  --COLOR-KEYLINE-SOLID: #ebebeb;
+
+  --OPACITY-100: 1;
+  --OPACITY-70: 0.7;
+  --OPACITY-50: 0.5;
+  --OPACITY-15: 0.15;
+
+  --BORDER-RADIUS-BASE: 3px;
+  --SPACING-BASE: 8;
+  --ICON-VIEWBOX-SIZE: calc(var(--SPACING-BASE) * 3);
+
+  --ZINDEX-TOOLTIP: 1070;
+  --ZINDEX-STICKY: 1010;
+
+  --RADIUS-05: 4px;
+  --RADIUS-1: 8px;
+  --RADIUS-2: 16px;
+  --RADIUS-3: 24px;
+  --RADIUS-4: 32px;
+  --RADIUS-5: 40px;
+  --RADIUS-6: 48px;
+  --RADIUS-7: 56px;
+  --RADIUS-8: 64px;
+
+  --FONTS-SYSTEM: -apple-system, "BlinkMacSystemFont", "Segoe UI", "Roboto",
+    "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  --FONTS-BRAND: "Avenir Next", Metropolis, Helvetica Neue, Arial, sans-serif;
+  --FONTS-CODE: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier,
+    monospace;
+
+  --FONT-STACK-BASE: var(--FONTS-SYSTEM);
+  --FONT-STACK-BRAND: var(--FONTS-BRAND, --FONTS-SYSTEM);
+  --FONT-STACK-CODE: var(--FONTS-CODE, --FONTS-SYSTEM);
+
+  --FONT-SIZE-HERO: 40px;
+  --FONT-SIZE-TITLE: 36px;
+  --FONT-SIZE-LG: 18px;
+  --FONT-SIZE-MD: 16px;
+  --FONT-SIZE-BASE: 14px;
+  --FONT-SIZE-SM: 11px;
+  --FONT-SIZE-XS: 9px;
+
+  --LINE-HEIGHT-BASE: 1.4;
+  --FONT-WEIGHT-BASE: 400;
+  --FONT-WEIGHT-SEMIBOLD: calc(var(--FONT-WEIGHT-BASE) * 1.25);
+  --FONT-WEIGHT-BOLD: 600;
+
+  --DARK-ON-LIGHT-CONTRAST-ENHANCEMENT-RATIO: 2;
+}

@@ -1,0 +1,43 @@
+#wrapper {
+  align-items: stretch;
+  color: var(--COLOR-CONTENT);
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  padding: 8px;
+  font-family: var(--FONT-STACK-BASE);
+}
+
+#wrapper:not(:first-of-type) {
+  margin-top: 32px;
+}
+
+#content {
+  margin: 0 auto;
+  padding: 8px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex: 1 0 auto;
+}
+
+header {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  padding: 0 8px 0;
+  width: 100%;
+  flex: 0 0 24px;
+}
+
+h3 {
+  color: inherit;
+  font-size: var(--FONT-SIZE-BASE);
+  font-weight: var(--FONT-WEIGHT-SEMIBOLD);
+  margin: 0;
+}
+
+::slotted(span) {
+  flex: 0 0 auto;
+  padding-right: 4px !important;
+}
