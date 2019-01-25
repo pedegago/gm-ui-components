@@ -14,11 +14,32 @@
     "build": "stencil build --docs",
     "start": "stencil build --dev --watch --serve",
     "test": "stencil test --spec --e2e",
-    "test.watch": "stencil test --spec --e2e --watchAll"
+    "test.watch": "stencil test --spec --e2e --watchAll",
+    "storybook": "start-storybook -p 9009 -c .storybook -s www",
+    "build-storybook": "build-storybook"
   },
   "dependencies": {},
   "devDependencies": {
-    "@stencil/core": "~0.16.2"
+    "@babel/core": "^7.2.2",
+    "@babel/plugin-proposal-decorators": "^7.3.0",
+    "@babel/preset-react": "^7.0.0",
+    "@babel/preset-typescript": "^7.1.0",
+    "@stencil/core": "~0.16.2",
+    "@storybook/addon-backgrounds": "^4.1.11",
+    "@storybook/addon-info": "^4.1.11",
+    "@storybook/addon-knobs": "^4.1.11",
+    "@storybook/addon-links": "^4.1.11",
+    "@storybook/addon-options": "^4.1.11",
+    "@storybook/addon-viewport": "^4.1.11",
+    "@storybook/addons": "^4.1.11",
+    "@storybook/polymer": "^4.1.11",
+    "@storybook/storybook-deployer": "^2.8.1",
+    "awesome-typescript-loader": "^5.2.1",
+    "babel-loader": "^8.0.5",
+    "lit-html": "^1.0.0-rc.2",
+    "polymer-webpack-loader": "^2.0.3",
+    "ts-loader": "^5.3.3",
+    "webpack-bundle-analyzer": "^3.0.3"
   },
   "license": "MIT"
 }
