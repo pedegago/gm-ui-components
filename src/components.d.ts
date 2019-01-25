@@ -12,8 +12,19 @@ import '@stencil/core';
 
 export namespace Components {
 
-  interface GmUiBreadcrumbs {}
-  interface GmUiBreadcrumbsAttributes extends StencilHTMLAttributes {}
+  interface GmUiBreadcrumbItem {}
+  interface GmUiBreadcrumbItemAttributes extends StencilHTMLAttributes {}
+
+  interface GmUiBreadcrumbs {
+    'collapsed': boolean;
+    'crumbs': any;
+    'maxItems': string;
+  }
+  interface GmUiBreadcrumbsAttributes extends StencilHTMLAttributes {
+    'collapsed'?: boolean;
+    'crumbs'?: any;
+    'maxItems'?: string;
+  }
 
   interface GmUiButton {}
   interface GmUiButtonAttributes extends StencilHTMLAttributes {}
@@ -112,6 +123,7 @@ export namespace Components {
 
 declare global {
   interface StencilElementInterfaces {
+    'GmUiBreadcrumbItem': Components.GmUiBreadcrumbItem;
     'GmUiBreadcrumbs': Components.GmUiBreadcrumbs;
     'GmUiButton': Components.GmUiButton;
     'GmUiReadout': Components.GmUiReadout;
@@ -144,6 +156,7 @@ declare global {
   }
 
   interface StencilIntrinsicElements {
+    'gm-ui-breadcrumb-item': Components.GmUiBreadcrumbItemAttributes;
     'gm-ui-breadcrumbs': Components.GmUiBreadcrumbsAttributes;
     'gm-ui-button': Components.GmUiButtonAttributes;
     'gm-ui-readout': Components.GmUiReadoutAttributes;
@@ -175,6 +188,12 @@ declare global {
     'gm-ui-tab-group': Components.GmUiTabGroupAttributes;
   }
 
+
+  interface HTMLGmUiBreadcrumbItemElement extends Components.GmUiBreadcrumbItem, HTMLStencilElement {}
+  var HTMLGmUiBreadcrumbItemElement: {
+    prototype: HTMLGmUiBreadcrumbItemElement;
+    new (): HTMLGmUiBreadcrumbItemElement;
+  };
 
   interface HTMLGmUiBreadcrumbsElement extends Components.GmUiBreadcrumbs, HTMLStencilElement {}
   var HTMLGmUiBreadcrumbsElement: {
@@ -351,6 +370,7 @@ declare global {
   };
 
   interface HTMLElementTagNameMap {
+    'gm-ui-breadcrumb-item': HTMLGmUiBreadcrumbItemElement
     'gm-ui-breadcrumbs': HTMLGmUiBreadcrumbsElement
     'gm-ui-button': HTMLGmUiButtonElement
     'gm-ui-readout': HTMLGmUiReadoutElement
@@ -383,6 +403,7 @@ declare global {
   }
 
   interface ElementTagNameMap {
+    'gm-ui-breadcrumb-item': HTMLGmUiBreadcrumbItemElement;
     'gm-ui-breadcrumbs': HTMLGmUiBreadcrumbsElement;
     'gm-ui-button': HTMLGmUiButtonElement;
     'gm-ui-readout': HTMLGmUiReadoutElement;

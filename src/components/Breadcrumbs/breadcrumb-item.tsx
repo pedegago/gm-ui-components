@@ -1,45 +1,19 @@
-import { Component, Prop, Element, Watch } from "@stencil/core";
+import { Component, Element } from "@stencil/core";
 
 @Component({
-  tag: "gm-ui-breadcrumbs",
-  styleUrls: ["../../style/styleVariables.css", "./breadcrumbs.css"],
+  tag: "gm-ui-breadcrumb-item",
+  styleUrls: ["../../style/styleVariables.css", "./breadcrumb-item.css"],
   shadow: true
 })
-export class Breadcrumbs {
-  @Prop({ mutable: true, reflectToAttr: true }) collapsed: boolean = false;
-  @Prop({ mutable: true, reflectToAttr: true }) maxItems: string = "10";
-  @Prop({ mutable: true, reflectToAttr: true }) crumbs = [];
-
+export class BreadcrumbItem {
   @Element() el: HTMLElement;
-
-  componentDidLoad() {
-    this.crumbs = Array.from(this.el.children);
-    if (this.crumbs.length >= +this.maxItems) {
-      this.collapsed = true;
-    }
-  }
-
-  componentDidUpdate() {
-    const ellipsis = document.createElement("span");
-    ellipsis.id = "ellipsis";
-    ellipsis.textContent = "...";
-
-    this.el.insertBefore(ellipsis, this.el.querySelector("a").lastChild);
-  }
-
-  @Watch("maxItems")
-  maxItemsChanged(newValue: string) {
-    console.log("maxItems changed");
-    if (this.el.children.length >= +newValue) {
-      this.collapsed = true;
-    }
-  }
-
   render() {
+    const slots = this.el.shadowRoot.querySelectorAll("slot");
+    console.log(slots.length);
     return (
-      <div id="container">
+      <li>
         <slot />
-      </div>
+      </li>
     );
   }
 }
@@ -66,7 +40,7 @@ export class Breadcrumbs {
 // class Breadcrumbs extends React.Component {
 //   constructor(props) {
 //     super(props);
-//     this.state = { collapsed: false };
+//     this.state = { isCollapsed: false };
 //   }
 
 //   componentDidMount() {
@@ -87,9 +61,9 @@ export class Breadcrumbs {
 //     }
 //   };
 
-//   collapse = () => this.setState({ collapsed: true });
+//   collapse = () => this.setState({ isCollapsed: true });
 
-//   expand = () => this.setState({ collapsed: false });
+//   expand = () => this.setState({ isCollapsed: false });
 
 //   renderCollapsed = crumbs => {
 //     const elipsisItem = (
@@ -118,10 +92,10 @@ export class Breadcrumbs {
 
 //   render() {
 //     const { crumbs, ...props } = this.props;
-//     const { collapsed } = this.state;
+//     const { isCollapsed } = this.state;
 //     return (
 //       <BreadcrumbsContainer {...props}>
-//         {collapsed && crumbs.length > 2
+//         {isCollapsed && crumbs.length > 2
 //           ? this.renderCollapsed(crumbs)
 //           : this.renderExpanded(crumbs)}
 //       </BreadcrumbsContainer>
