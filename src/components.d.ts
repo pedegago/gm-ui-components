@@ -12,23 +12,44 @@ import '@stencil/core';
 
 export namespace Components {
 
+  interface GmUiBreadcrumbs {}
+  interface GmUiBreadcrumbsAttributes extends StencilHTMLAttributes {}
+
+  interface GmUiButton {}
+  interface GmUiButtonAttributes extends StencilHTMLAttributes {}
+
+  interface GmUiReadout {}
+  interface GmUiReadoutAttributes extends StencilHTMLAttributes {}
+
+  interface GmUiSpinner {}
+  interface GmUiSpinnerAttributes extends StencilHTMLAttributes {}
+
+  interface GmUiTab {}
+  interface GmUiTabAttributes extends StencilHTMLAttributes {}
+
+  interface GmUiTable {}
+  interface GmUiTableAttributes extends StencilHTMLAttributes {}
+
+  interface GmUiTooltip {}
+  interface GmUiTooltipAttributes extends StencilHTMLAttributes {}
+
   interface GmUiAppFooter {}
   interface GmUiAppFooterAttributes extends StencilHTMLAttributes {}
 
   interface GmUiAppHeader {}
   interface GmUiAppHeaderAttributes extends StencilHTMLAttributes {}
 
-  interface GmUiBreadcrumbs {}
-  interface GmUiBreadcrumbsAttributes extends StencilHTMLAttributes {}
-
   interface GmUiButtonGroup {}
   interface GmUiButtonGroupAttributes extends StencilHTMLAttributes {}
 
-  interface GmUiButton {}
-  interface GmUiButtonAttributes extends StencilHTMLAttributes {}
-
-  interface GmUiErrorCard {}
-  interface GmUiErrorCardAttributes extends StencilHTMLAttributes {}
+  interface GmUiErrorCard {
+    'errorMsg': string;
+    'icon': any;
+  }
+  interface GmUiErrorCardAttributes extends StencilHTMLAttributes {
+    'errorMsg'?: string;
+    'icon'?: any;
+  }
 
   interface GmUiFieldset {}
   interface GmUiFieldsetAttributes extends StencilHTMLAttributes {}
@@ -81,32 +102,22 @@ export namespace Components {
   interface GmUiReadoutGroup {}
   interface GmUiReadoutGroupAttributes extends StencilHTMLAttributes {}
 
-  interface GmUiReadout {}
-  interface GmUiReadoutAttributes extends StencilHTMLAttributes {}
-
-  interface GmUiSpinner {}
-  interface GmUiSpinnerAttributes extends StencilHTMLAttributes {}
-
   interface GmUiTabGroup {}
   interface GmUiTabGroupAttributes extends StencilHTMLAttributes {}
-
-  interface GmUiTab {}
-  interface GmUiTabAttributes extends StencilHTMLAttributes {}
-
-  interface GmUiTable {}
-  interface GmUiTableAttributes extends StencilHTMLAttributes {}
-
-  interface GmUiTooltip {}
-  interface GmUiTooltipAttributes extends StencilHTMLAttributes {}
 }
 
 declare global {
   interface StencilElementInterfaces {
+    'GmUiBreadcrumbs': Components.GmUiBreadcrumbs;
+    'GmUiButton': Components.GmUiButton;
+    'GmUiReadout': Components.GmUiReadout;
+    'GmUiSpinner': Components.GmUiSpinner;
+    'GmUiTab': Components.GmUiTab;
+    'GmUiTable': Components.GmUiTable;
+    'GmUiTooltip': Components.GmUiTooltip;
     'GmUiAppFooter': Components.GmUiAppFooter;
     'GmUiAppHeader': Components.GmUiAppHeader;
-    'GmUiBreadcrumbs': Components.GmUiBreadcrumbs;
     'GmUiButtonGroup': Components.GmUiButtonGroup;
-    'GmUiButton': Components.GmUiButton;
     'GmUiErrorCard': Components.GmUiErrorCard;
     'GmUiFieldset': Components.GmUiFieldset;
     'GmUiInputBox': Components.GmUiInputBox;
@@ -125,20 +136,20 @@ declare global {
     'GmUiNavCardGroup': Components.GmUiNavCardGroup;
     'GmUiNavCard': Components.GmUiNavCard;
     'GmUiReadoutGroup': Components.GmUiReadoutGroup;
-    'GmUiReadout': Components.GmUiReadout;
-    'GmUiSpinner': Components.GmUiSpinner;
     'GmUiTabGroup': Components.GmUiTabGroup;
-    'GmUiTab': Components.GmUiTab;
-    'GmUiTable': Components.GmUiTable;
-    'GmUiTooltip': Components.GmUiTooltip;
   }
 
   interface StencilIntrinsicElements {
+    'gm-ui-breadcrumbs': Components.GmUiBreadcrumbsAttributes;
+    'gm-ui-button': Components.GmUiButtonAttributes;
+    'gm-ui-readout': Components.GmUiReadoutAttributes;
+    'gm-ui-spinner': Components.GmUiSpinnerAttributes;
+    'gm-ui-tab': Components.GmUiTabAttributes;
+    'gm-ui-table': Components.GmUiTableAttributes;
+    'gm-ui-tooltip': Components.GmUiTooltipAttributes;
     'gm-ui-app-footer': Components.GmUiAppFooterAttributes;
     'gm-ui-app-header': Components.GmUiAppHeaderAttributes;
-    'gm-ui-breadcrumbs': Components.GmUiBreadcrumbsAttributes;
     'gm-ui-button-group': Components.GmUiButtonGroupAttributes;
-    'gm-ui-button': Components.GmUiButtonAttributes;
     'gm-ui-error-card': Components.GmUiErrorCardAttributes;
     'gm-ui-fieldset': Components.GmUiFieldsetAttributes;
     'gm-ui-input-box': Components.GmUiInputBoxAttributes;
@@ -157,14 +168,51 @@ declare global {
     'gm-ui-nav-card-group': Components.GmUiNavCardGroupAttributes;
     'gm-ui-nav-card': Components.GmUiNavCardAttributes;
     'gm-ui-readout-group': Components.GmUiReadoutGroupAttributes;
-    'gm-ui-readout': Components.GmUiReadoutAttributes;
-    'gm-ui-spinner': Components.GmUiSpinnerAttributes;
     'gm-ui-tab-group': Components.GmUiTabGroupAttributes;
-    'gm-ui-tab': Components.GmUiTabAttributes;
-    'gm-ui-table': Components.GmUiTableAttributes;
-    'gm-ui-tooltip': Components.GmUiTooltipAttributes;
   }
 
+
+  interface HTMLGmUiBreadcrumbsElement extends Components.GmUiBreadcrumbs, HTMLStencilElement {}
+  var HTMLGmUiBreadcrumbsElement: {
+    prototype: HTMLGmUiBreadcrumbsElement;
+    new (): HTMLGmUiBreadcrumbsElement;
+  };
+
+  interface HTMLGmUiButtonElement extends Components.GmUiButton, HTMLStencilElement {}
+  var HTMLGmUiButtonElement: {
+    prototype: HTMLGmUiButtonElement;
+    new (): HTMLGmUiButtonElement;
+  };
+
+  interface HTMLGmUiReadoutElement extends Components.GmUiReadout, HTMLStencilElement {}
+  var HTMLGmUiReadoutElement: {
+    prototype: HTMLGmUiReadoutElement;
+    new (): HTMLGmUiReadoutElement;
+  };
+
+  interface HTMLGmUiSpinnerElement extends Components.GmUiSpinner, HTMLStencilElement {}
+  var HTMLGmUiSpinnerElement: {
+    prototype: HTMLGmUiSpinnerElement;
+    new (): HTMLGmUiSpinnerElement;
+  };
+
+  interface HTMLGmUiTabElement extends Components.GmUiTab, HTMLStencilElement {}
+  var HTMLGmUiTabElement: {
+    prototype: HTMLGmUiTabElement;
+    new (): HTMLGmUiTabElement;
+  };
+
+  interface HTMLGmUiTableElement extends Components.GmUiTable, HTMLStencilElement {}
+  var HTMLGmUiTableElement: {
+    prototype: HTMLGmUiTableElement;
+    new (): HTMLGmUiTableElement;
+  };
+
+  interface HTMLGmUiTooltipElement extends Components.GmUiTooltip, HTMLStencilElement {}
+  var HTMLGmUiTooltipElement: {
+    prototype: HTMLGmUiTooltipElement;
+    new (): HTMLGmUiTooltipElement;
+  };
 
   interface HTMLGmUiAppFooterElement extends Components.GmUiAppFooter, HTMLStencilElement {}
   var HTMLGmUiAppFooterElement: {
@@ -178,22 +226,10 @@ declare global {
     new (): HTMLGmUiAppHeaderElement;
   };
 
-  interface HTMLGmUiBreadcrumbsElement extends Components.GmUiBreadcrumbs, HTMLStencilElement {}
-  var HTMLGmUiBreadcrumbsElement: {
-    prototype: HTMLGmUiBreadcrumbsElement;
-    new (): HTMLGmUiBreadcrumbsElement;
-  };
-
   interface HTMLGmUiButtonGroupElement extends Components.GmUiButtonGroup, HTMLStencilElement {}
   var HTMLGmUiButtonGroupElement: {
     prototype: HTMLGmUiButtonGroupElement;
     new (): HTMLGmUiButtonGroupElement;
-  };
-
-  interface HTMLGmUiButtonElement extends Components.GmUiButton, HTMLStencilElement {}
-  var HTMLGmUiButtonElement: {
-    prototype: HTMLGmUiButtonElement;
-    new (): HTMLGmUiButtonElement;
   };
 
   interface HTMLGmUiErrorCardElement extends Components.GmUiErrorCard, HTMLStencilElement {}
@@ -304,48 +340,23 @@ declare global {
     new (): HTMLGmUiReadoutGroupElement;
   };
 
-  interface HTMLGmUiReadoutElement extends Components.GmUiReadout, HTMLStencilElement {}
-  var HTMLGmUiReadoutElement: {
-    prototype: HTMLGmUiReadoutElement;
-    new (): HTMLGmUiReadoutElement;
-  };
-
-  interface HTMLGmUiSpinnerElement extends Components.GmUiSpinner, HTMLStencilElement {}
-  var HTMLGmUiSpinnerElement: {
-    prototype: HTMLGmUiSpinnerElement;
-    new (): HTMLGmUiSpinnerElement;
-  };
-
   interface HTMLGmUiTabGroupElement extends Components.GmUiTabGroup, HTMLStencilElement {}
   var HTMLGmUiTabGroupElement: {
     prototype: HTMLGmUiTabGroupElement;
     new (): HTMLGmUiTabGroupElement;
   };
 
-  interface HTMLGmUiTabElement extends Components.GmUiTab, HTMLStencilElement {}
-  var HTMLGmUiTabElement: {
-    prototype: HTMLGmUiTabElement;
-    new (): HTMLGmUiTabElement;
-  };
-
-  interface HTMLGmUiTableElement extends Components.GmUiTable, HTMLStencilElement {}
-  var HTMLGmUiTableElement: {
-    prototype: HTMLGmUiTableElement;
-    new (): HTMLGmUiTableElement;
-  };
-
-  interface HTMLGmUiTooltipElement extends Components.GmUiTooltip, HTMLStencilElement {}
-  var HTMLGmUiTooltipElement: {
-    prototype: HTMLGmUiTooltipElement;
-    new (): HTMLGmUiTooltipElement;
-  };
-
   interface HTMLElementTagNameMap {
+    'gm-ui-breadcrumbs': HTMLGmUiBreadcrumbsElement
+    'gm-ui-button': HTMLGmUiButtonElement
+    'gm-ui-readout': HTMLGmUiReadoutElement
+    'gm-ui-spinner': HTMLGmUiSpinnerElement
+    'gm-ui-tab': HTMLGmUiTabElement
+    'gm-ui-table': HTMLGmUiTableElement
+    'gm-ui-tooltip': HTMLGmUiTooltipElement
     'gm-ui-app-footer': HTMLGmUiAppFooterElement
     'gm-ui-app-header': HTMLGmUiAppHeaderElement
-    'gm-ui-breadcrumbs': HTMLGmUiBreadcrumbsElement
     'gm-ui-button-group': HTMLGmUiButtonGroupElement
-    'gm-ui-button': HTMLGmUiButtonElement
     'gm-ui-error-card': HTMLGmUiErrorCardElement
     'gm-ui-fieldset': HTMLGmUiFieldsetElement
     'gm-ui-input-box': HTMLGmUiInputBoxElement
@@ -364,20 +375,20 @@ declare global {
     'gm-ui-nav-card-group': HTMLGmUiNavCardGroupElement
     'gm-ui-nav-card': HTMLGmUiNavCardElement
     'gm-ui-readout-group': HTMLGmUiReadoutGroupElement
-    'gm-ui-readout': HTMLGmUiReadoutElement
-    'gm-ui-spinner': HTMLGmUiSpinnerElement
     'gm-ui-tab-group': HTMLGmUiTabGroupElement
-    'gm-ui-tab': HTMLGmUiTabElement
-    'gm-ui-table': HTMLGmUiTableElement
-    'gm-ui-tooltip': HTMLGmUiTooltipElement
   }
 
   interface ElementTagNameMap {
+    'gm-ui-breadcrumbs': HTMLGmUiBreadcrumbsElement;
+    'gm-ui-button': HTMLGmUiButtonElement;
+    'gm-ui-readout': HTMLGmUiReadoutElement;
+    'gm-ui-spinner': HTMLGmUiSpinnerElement;
+    'gm-ui-tab': HTMLGmUiTabElement;
+    'gm-ui-table': HTMLGmUiTableElement;
+    'gm-ui-tooltip': HTMLGmUiTooltipElement;
     'gm-ui-app-footer': HTMLGmUiAppFooterElement;
     'gm-ui-app-header': HTMLGmUiAppHeaderElement;
-    'gm-ui-breadcrumbs': HTMLGmUiBreadcrumbsElement;
     'gm-ui-button-group': HTMLGmUiButtonGroupElement;
-    'gm-ui-button': HTMLGmUiButtonElement;
     'gm-ui-error-card': HTMLGmUiErrorCardElement;
     'gm-ui-fieldset': HTMLGmUiFieldsetElement;
     'gm-ui-input-box': HTMLGmUiInputBoxElement;
@@ -396,12 +407,7 @@ declare global {
     'gm-ui-nav-card-group': HTMLGmUiNavCardGroupElement;
     'gm-ui-nav-card': HTMLGmUiNavCardElement;
     'gm-ui-readout-group': HTMLGmUiReadoutGroupElement;
-    'gm-ui-readout': HTMLGmUiReadoutElement;
-    'gm-ui-spinner': HTMLGmUiSpinnerElement;
     'gm-ui-tab-group': HTMLGmUiTabGroupElement;
-    'gm-ui-tab': HTMLGmUiTabElement;
-    'gm-ui-table': HTMLGmUiTableElement;
-    'gm-ui-tooltip': HTMLGmUiTooltipElement;
   }
 
 

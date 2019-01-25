@@ -1,0 +1,30 @@
+#error-box {
+  align-items: center;
+  cursor: default;
+  display: flex;
+  flex: 1;
+  height: auto;
+  justify-content: center;
+  user-select: none;
+  font-family: var(--FONT-STACK-BASE);
+}
+
+#error-content {
+  align-items: center;
+  border: 1px solid var(--COLOR-INTENT-WARNING);
+  border-radius: calc(var(--BORDER-RADIUS-BASE) * 2);
+  color: var(--COLOR-CONTENT);
+  display: inline-flex;
+  flex-basis: 600px;
+  flex-flow: row nowrap;
+  font-size: var(--FONT-SIZE-HERO);
+  justify-content: center;
+  margin: 32px;
+  padding: 64px 32px;
+  padding-top: 64px;
+  padding-bottom: 64px;
+}
+
+span {
+  margin-left: 8px;
+}
