@@ -1,0 +1,27 @@
+#wrapper {
+  align-items: stretch;
+  color: var(--COLOR-CONTENT);
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  padding: 8px;
+  font-family: var(--FONT-STACK-BASE);
+}
+
+#wrapper:not(:first-of-type) {
+  margin-top: 32px;
+}
+
+#content {
+  margin: 0 auto;
+  padding: 8px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex: 1 0 auto;
+}
+
+span#icon {
+  flex: 0 0 auto;
+  padding-right: 4px !important;
+}

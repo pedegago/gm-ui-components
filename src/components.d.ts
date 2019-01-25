@@ -90,8 +90,16 @@ export namespace Components {
   interface GmUiTextarea {}
   interface GmUiTextareaAttributes extends StencilHTMLAttributes {}
 
-  interface GmUiLayoutSection {}
-  interface GmUiLayoutSectionAttributes extends StencilHTMLAttributes {}
+  interface GmUiLayoutSection {
+    'childEls': HTMLElement;
+    'icon': Function;
+    'sectionTitle': string;
+  }
+  interface GmUiLayoutSectionAttributes extends StencilHTMLAttributes {
+    'childEls'?: HTMLElement;
+    'icon'?: Function;
+    'sectionTitle'?: string;
+  }
 
   interface GmUiNavCardGroup {}
   interface GmUiNavCardGroupAttributes extends StencilHTMLAttributes {}
