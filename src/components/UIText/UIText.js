@@ -4,9 +4,7 @@ import styled, { css } from "styled-components";
 import { keen } from "style/styleVariables";
 
 const Wrap = styled.span`
-  /* TODO: inherit font family, don't set it. */
-  /* font-family: ${props => props.theme.FONT_STACK_BASE}; */
-  /* font-size: ${props => props.theme.FONT_SIZE_BASE}; */
+  display: block;
   opacity: 0.7;
 
   ${props =>
@@ -34,26 +32,69 @@ const Wrap = styled.span`
       overflow: hidden;
       text-overflow: ellipsis;
     `}
+
+  ${props =>
+    props.level === "default" &&
+    css`
+      font-size: ${props => props.theme.FONT_SIZE_BASE};
+    `}
+  ${props =>
+    props.level === "small" &&
+    css`
+      font-size: ${props => props.theme.FONT_SIZE_SM};
+    `}
+  ${props =>
+    props.level === "micro" &&
+    css`
+      font-size: ${props => props.theme.FONT_SIZE_XS};
+    `}
+  ${props =>
+    props.level === "large" &&
+    css`
+      font-size: ${props => props.theme.FONT_SIZE_MD};
+    `}
+
+    ${props =>
+      props.lettercase === "caps" &&
+      css`
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+      `}
 `;
 
 UIText.propTypes = {
   children: PropTypes.any,
   color: PropTypes.oneOf(["contrast", "default", "subtle", "nonessential"]),
-  hideOverflow: PropTypes.bool
+  hideOverflow: PropTypes.bool,
+  lettercase: PropTypes.oneOf(["default", "caps"]),
+  level: PropTypes.oneOf(["default", "small", "micro", "large"])
 };
 
 UIText.defaultProps = {
   theme: keen,
+  level: "default",
   color: "default",
+  lettercase: "default",
   hideOverflow: false
 };
 
 /**
  * Description of your component
  */
-export default function UIText({ children, color, hideOverflow }) {
+export default function UIText({
+  children,
+  color,
+  hideOverflow,
+  level,
+  lettercase
+}) {
   return (
-    <Wrap color={color} hideOverflow={hideOverflow}>
+    <Wrap
+      color={color}
+      hideOverflow={hideOverflow}
+      level={level}
+      lettercase={lettercase}
+    >
       {children}
     </Wrap>
   );
