@@ -128,7 +128,7 @@ stories
     }
   )
   .add(
-    "All combinations",
+    "Combinations",
     () => {
       return (
         <Grid>
