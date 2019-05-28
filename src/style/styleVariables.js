@@ -1,6 +1,6 @@
 // COLORS
-export const COLOR_BRAND_A = "#0aab2a";
-export const COLOR_BRAND_B = "#0aab2a";
+export const COLOR_BRAND_A = "#00b42b";
+export const COLOR_BRAND_B = "#00b42b";
 export const COLOR_CONTENT = "#000";
 
 export const COLOR_BACKGROUND_A = "#fff";
@@ -59,7 +59,7 @@ export const FONT_SIZE_XS = "9px"; // Will be changed to 10px
 export const LINE_HEIGHT_BASE = 1.4;
 export const FONT_WEIGHT_BASE = 400;
 export const FONT_WEIGHT_SEMIBOLD = FONT_WEIGHT_BASE * 1.25; // Will be changed to 600
-export const FONT_WEIGHT_BOLD = 600; // Will be changed to 700 or 800
+export const FONT_WEIGHT_BOLD = 800; // Will be changed to 700 or 800
 
 // DEPRECATE
 export const DARK_ON_LIGHT_CONTRAST_ENHANCEMENT_RATIO = 2;
@@ -67,8 +67,8 @@ export const DARK_ON_LIGHT_CONTRAST_ENHANCEMENT_RATIO = 2;
 export const keen = {
   name: "Keen",
 
-  COLOR_BRAND_A: "#0aab2a",
-  COLOR_BRAND_B: "#0aab2a",
+  COLOR_BRAND_A: "#00b42b",
+  COLOR_BRAND_B: "#00b42b",
   COLOR_CONTENT: "#000",
 
   COLOR_BACKGROUND_A: "#ffffff",
@@ -133,8 +133,8 @@ export const keen = {
 export const keenDark = {
   name: "KeenDark",
 
-  COLOR_BRAND_A: "#0aab2a",
-  COLOR_BRAND_B: "#0aab2a",
+  COLOR_BRAND_A: "#00b42b",
+  COLOR_BRAND_B: "#00b42b",
   COLOR_CONTENT: "#FFF",
 
   COLOR_BACKGROUND_A: "#000000",
