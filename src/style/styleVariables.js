@@ -49,12 +49,12 @@ export const FONT_STACK_BRAND = `${FONTS_BRAND}, ${FONTS_SYSTEM}`;
 export const FONT_STACK_CODE = `${FONTS_CODE}, ${FONTS_SYSTEM}`;
 
 export const FONT_SIZE_HERO = "40px";
-export const FONT_SIZE_TITLE = "36px"; // Will be changed to 32px
-export const FONT_SIZE_LG = "18px"; // Will be changed to 24px
-export const FONT_SIZE_MD = "16px"; // Will be changed to 18px
+export const FONT_SIZE_TITLE = "32px"; // Will be changed to 32px
+export const FONT_SIZE_LG = "24px"; // Will be changed to 24px
+export const FONT_SIZE_MD = "18px"; // Will be changed to 18px
 export const FONT_SIZE_BASE = "14px";
-export const FONT_SIZE_SM = "11px"; // Will be changed to 12px
-export const FONT_SIZE_XS = "9px"; // Will be changed to 10px
+export const FONT_SIZE_SM = "12px"; // Will be changed to 12px
+export const FONT_SIZE_XS = "10px"; // Will be changed to 10px
 
 export const LINE_HEIGHT_BASE = 1.4;
 export const FONT_WEIGHT_BASE = 400;
@@ -90,7 +90,7 @@ export const keen = {
   OPACITY_15: "0.15",
 
   // LAYOUT
-  BORDER_RADIUS_BASE: "3px", // Will be changed to 4px
+  BORDER_RADIUS_BASE: "4px", // Will be changed to 4px
   SPACING_BASE: 8,
   ICON_VIEWBOX_SIZE: 24, // Move to Icons component?
 
@@ -117,12 +117,12 @@ export const keen = {
   FONT_STACK_CODE: FONTS_CODE,
 
   FONT_SIZE_HERO: "40px",
-  FONT_SIZE_TITLE: "36px", // Will be changed to 32px
-  FONT_SIZE_LG: "18px", // Will be changed to 24px
-  FONT_SIZE_MD: "16px", // Will be changed to 18px
+  FONT_SIZE_TITLE: "32px", // Will be changed to 32px
+  FONT_SIZE_LG: "24px", // Will be changed to 24px
+  FONT_SIZE_MD: "18px", // Will be changed to 18px
   FONT_SIZE_BASE: "14px",
-  FONT_SIZE_SM: "11px", // Will be changed to 12px
-  FONT_SIZE_XS: "9px", // Will be changed to 10px
+  FONT_SIZE_SM: "12px", // Will be changed to 12px
+  FONT_SIZE_XS: "10px", // Will be changed to 10px
 
   LINE_HEIGHT_BASE: 1.4,
   FONT_WEIGHT_BASE: 400,
@@ -156,7 +156,7 @@ export const keenDark = {
   OPACITY_15: "0.15",
 
   // LAYOUT
-  BORDER_RADIUS_BASE: "3px", // Will be changed to 4px
+  BORDER_RADIUS_BASE: "4px", // Will be changed to 4px
   SPACING_BASE: 8,
   ICON_VIEWBOX_SIZE: 24, // Move to Icons component?
 
@@ -183,12 +183,12 @@ export const keenDark = {
   FONT_STACK_CODE: FONTS_CODE,
 
   FONT_SIZE_HERO: "40px",
-  FONT_SIZE_TITLE: "36px", // Will be changed to 32px
-  FONT_SIZE_LG: "18px", // Will be changed to 24px
-  FONT_SIZE_MD: "16px", // Will be changed to 18px
+  FONT_SIZE_TITLE: "32px", // Will be changed to 32px
+  FONT_SIZE_LG: "24px", // Will be changed to 24px
+  FONT_SIZE_MD: "18px", // Will be changed to 18px
   FONT_SIZE_BASE: "14px",
-  FONT_SIZE_SM: "11px", // Will be changed to 12px
-  FONT_SIZE_XS: "9px", // Will be changed to 10px
+  FONT_SIZE_SM: "12px", // Will be changed to 12px
+  FONT_SIZE_XS: "10px", // Will be changed to 10px
 
   LINE_HEIGHT_BASE: 1.4,
   FONT_WEIGHT_BASE: 400,

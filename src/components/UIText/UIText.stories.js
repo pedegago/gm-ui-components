@@ -1,6 +1,6 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
-import { text, select } from "@storybook/addon-knobs";
+import { text, select, boolean } from "@storybook/addon-knobs";
 import styled from "styled-components";
 import UIText from "./UIText";
 
@@ -29,6 +29,7 @@ stories
             "default"
           )}
           lettercase={select("lettercase", ["default", "caps"], "default")}
+          isRunningText={boolean("isRunningText", false)}
         >
           {text("content", "A label, instance of metadata, or such.")}
         </UIText>
@@ -127,118 +128,106 @@ stories
       }
     }
   )
-  .add(
-    "Combinations",
-    () => {
-      return (
-        <Grid>
-          <UIText color={"contrast"} lettercase={"default"} level={"large"}>
-            Decipher Technology Studios
-          </UIText>
-          <UIText color={"default"} lettercase={"default"} level={"large"}>
-            Decipher Technology Studios
-          </UIText>
-          <UIText color={"subtle"} lettercase={"default"} level={"large"}>
-            Decipher Technology Studios
-          </UIText>
-          <UIText color={"nonessential"} lettercase={"default"} level={"large"}>
-            Decipher Technology Studios
-          </UIText>
-          <UIText color={"contrast"} lettercase={"default"} level={"default"}>
-            Decipher Technology Studios
-          </UIText>
-          <UIText color={"default"} lettercase={"default"} level={"default"}>
-            Decipher Technology Studios
-          </UIText>
-          <UIText color={"subtle"} lettercase={"default"} level={"default"}>
-            Decipher Technology Studios
-          </UIText>
-          <UIText
-            color={"nonessential"}
-            lettercase={"default"}
-            level={"default"}
-          >
-            Decipher Technology Studios
-          </UIText>
-          <UIText color={"contrast"} lettercase={"default"} level={"small"}>
-            Decipher Technology Studios
-          </UIText>
-          <UIText color={"default"} lettercase={"default"} level={"small"}>
-            Decipher Technology Studios
-          </UIText>
-          <UIText color={"subtle"} lettercase={"default"} level={"small"}>
-            Decipher Technology Studios
-          </UIText>
-          <UIText color={"nonessential"} lettercase={"default"} level={"small"}>
-            Decipher Technology Studios
-          </UIText>
-          <UIText color={"contrast"} lettercase={"default"} level={"micro"}>
-            Decipher Technology Studios
-          </UIText>
-          <UIText color={"default"} lettercase={"default"} level={"micro"}>
-            Decipher Technology Studios
-          </UIText>
-          <UIText color={"subtle"} lettercase={"default"} level={"micro"}>
-            Decipher Technology Studios
-          </UIText>
-          <UIText color={"nonessential"} lettercase={"default"} level={"micro"}>
-            Decipher Technology Studios
-          </UIText>
-          <hr style={{ gridColumn: "1 / -1", width: "100%" }} />
-          <UIText color={"contrast"} lettercase={"caps"} level={"large"}>
-            Decipher Technology Studios
-          </UIText>
-          <UIText color={"default"} lettercase={"caps"} level={"large"}>
-            Decipher Technology Studios
-          </UIText>
-          <UIText color={"subtle"} lettercase={"caps"} level={"large"}>
-            Decipher Technology Studios
-          </UIText>
-          <UIText color={"nonessential"} lettercase={"caps"} level={"large"}>
-            Decipher Technology Studios
-          </UIText>
-          <UIText color={"contrast"} lettercase={"caps"} level={"default"}>
-            Decipher Technology Studios
-          </UIText>
-          <UIText color={"default"} lettercase={"caps"} level={"default"}>
-            Decipher Technology Studios
-          </UIText>
-          <UIText color={"subtle"} lettercase={"caps"} level={"default"}>
-            Decipher Technology Studios
-          </UIText>
-          <UIText color={"nonessential"} lettercase={"caps"} level={"default"}>
-            Decipher Technology Studios
-          </UIText>
-          <UIText color={"contrast"} lettercase={"caps"} level={"small"}>
-            Decipher Technology Studios
-          </UIText>
-          <UIText color={"default"} lettercase={"caps"} level={"small"}>
-            Decipher Technology Studios
-          </UIText>
-          <UIText color={"subtle"} lettercase={"caps"} level={"small"}>
-            Decipher Technology Studios
-          </UIText>
-          <UIText color={"nonessential"} lettercase={"caps"} level={"small"}>
-            Decipher Technology Studios
-          </UIText>
-          <UIText color={"contrast"} lettercase={"caps"} level={"micro"}>
-            Decipher Technology Studios
-          </UIText>
-          <UIText color={"default"} lettercase={"caps"} level={"micro"}>
-            Decipher Technology Studios
-          </UIText>
-          <UIText color={"subtle"} lettercase={"caps"} level={"micro"}>
-            Decipher Technology Studios
-          </UIText>
-          <UIText color={"nonessential"} lettercase={"caps"} level={"micro"}>
-            Decipher Technology Studios
-          </UIText>
-        </Grid>
-      );
-    },
-    {
-      info: {
-        text: "Trim overflow with hideOverflow."
-      }
-    }
-  );
+  .add("Combinations", () => {
+    return (
+      <Grid>
+        <UIText color={"contrast"} lettercase={"default"} level={"large"}>
+          Decipher Technology Studios
+        </UIText>
+        <UIText color={"default"} lettercase={"default"} level={"large"}>
+          Decipher Technology Studios
+        </UIText>
+        <UIText color={"subtle"} lettercase={"default"} level={"large"}>
+          Decipher Technology Studios
+        </UIText>
+        <UIText color={"nonessential"} lettercase={"default"} level={"large"}>
+          Decipher Technology Studios
+        </UIText>
+        <UIText color={"contrast"} lettercase={"default"} level={"default"}>
+          Decipher Technology Studios
+        </UIText>
+        <UIText color={"default"} lettercase={"default"} level={"default"}>
+          Decipher Technology Studios
+        </UIText>
+        <UIText color={"subtle"} lettercase={"default"} level={"default"}>
+          Decipher Technology Studios
+        </UIText>
+        <UIText color={"nonessential"} lettercase={"default"} level={"default"}>
+          Decipher Technology Studios
+        </UIText>
+        <UIText color={"contrast"} lettercase={"default"} level={"small"}>
+          Decipher Technology Studios
+        </UIText>
+        <UIText color={"default"} lettercase={"default"} level={"small"}>
+          Decipher Technology Studios
+        </UIText>
+        <UIText color={"subtle"} lettercase={"default"} level={"small"}>
+          Decipher Technology Studios
+        </UIText>
+        <UIText color={"nonessential"} lettercase={"default"} level={"small"}>
+          Decipher Technology Studios
+        </UIText>
+        <UIText color={"contrast"} lettercase={"default"} level={"micro"}>
+          Decipher Technology Studios
+        </UIText>
+        <UIText color={"default"} lettercase={"default"} level={"micro"}>
+          Decipher Technology Studios
+        </UIText>
+        <UIText color={"subtle"} lettercase={"default"} level={"micro"}>
+          Decipher Technology Studios
+        </UIText>
+        <UIText color={"nonessential"} lettercase={"default"} level={"micro"}>
+          Decipher Technology Studios
+        </UIText>
+        <hr style={{ gridColumn: "1 / -1", width: "100%" }} />
+        <UIText color={"contrast"} lettercase={"caps"} level={"large"}>
+          Decipher Technology Studios
+        </UIText>
+        <UIText color={"default"} lettercase={"caps"} level={"large"}>
+          Decipher Technology Studios
+        </UIText>
+        <UIText color={"subtle"} lettercase={"caps"} level={"large"}>
+          Decipher Technology Studios
+        </UIText>
+        <UIText color={"nonessential"} lettercase={"caps"} level={"large"}>
+          Decipher Technology Studios
+        </UIText>
+        <UIText color={"contrast"} lettercase={"caps"} level={"default"}>
+          Decipher Technology Studios
+        </UIText>
+        <UIText color={"default"} lettercase={"caps"} level={"default"}>
+          Decipher Technology Studios
+        </UIText>
+        <UIText color={"subtle"} lettercase={"caps"} level={"default"}>
+          Decipher Technology Studios
+        </UIText>
+        <UIText color={"nonessential"} lettercase={"caps"} level={"default"}>
+          Decipher Technology Studios
+        </UIText>
+        <UIText color={"contrast"} lettercase={"caps"} level={"small"}>
+          Decipher Technology Studios
+        </UIText>
+        <UIText color={"default"} lettercase={"caps"} level={"small"}>
+          Decipher Technology Studios
+        </UIText>
+        <UIText color={"subtle"} lettercase={"caps"} level={"small"}>
+          Decipher Technology Studios
+        </UIText>
+        <UIText color={"nonessential"} lettercase={"caps"} level={"small"}>
+          Decipher Technology Studios
+        </UIText>
+        <UIText color={"contrast"} lettercase={"caps"} level={"micro"}>
+          Decipher Technology Studios
+        </UIText>
+        <UIText color={"default"} lettercase={"caps"} level={"micro"}>
+          Decipher Technology Studios
+        </UIText>
+        <UIText color={"subtle"} lettercase={"caps"} level={"micro"}>
+          Decipher Technology Studios
+        </UIText>
+        <UIText color={"nonessential"} lettercase={"caps"} level={"micro"}>
+          Decipher Technology Studios
+        </UIText>
+      </Grid>
+    );
+  });
