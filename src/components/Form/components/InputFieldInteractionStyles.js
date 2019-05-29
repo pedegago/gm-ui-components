@@ -1,29 +1,21 @@
 import { css } from "styled-components";
 
-import {
-  COLOR_INTENT_HIGHLIGHT,
-  OPACITY_50,
-  COLOR_INTENT_DANGER,
-  COLOR_BACKGROUND_A,
-  COLOR_BACKGROUND_B,
-  COLOR_INTENT_SUCCESS,
-  OPACITY_15
-} from "style/styleVariables";
 import { transparentize, mix } from "polished";
 
 export const FORM_HIGHLIGHT_SIZE = 2.5;
 
-export function formInteractionStyles() {
+export function formInteractionStyles({ props }) {
   return css`
     &:invalid {
       box-shadow: 0 0 0 0 transparent, 0 0 0 0 transparent;
 
       &:required {
-        background-color: ${mix(
-          OPACITY_15,
-          COLOR_INTENT_DANGER,
-          COLOR_BACKGROUND_A
-        )};
+        background-color: ${props =>
+          mix(
+            props.theme.OPACITY_15,
+            props.theme.COLOR_INTENT_DANGER,
+            props.theme.COLOR_BACKGROUND_A
+          )};
       }
     }
 
@@ -31,22 +23,22 @@ export function formInteractionStyles() {
     }
 
     &:disabled {
-      background-color: ${COLOR_BACKGROUND_B};
+      background-color: ${props => props.theme.COLOR_BACKGROUND_B};
     }
 
     &:valid {
       &:required {
-        background-color: ${mix(
-          OPACITY_15,
-          COLOR_INTENT_SUCCESS,
-          COLOR_BACKGROUND_A
-        )};
+        background-color: ${props =>
+          mix(
+            props.theme.OPACITY_15,
+            props.theme.COLOR_INTENT_SUCCESS,
+            props.theme.COLOR_BACKGROUND_A
+          )};
 
         &[type="checkbox"],
         &[type="radio"] {
           &:after {
-            border-color: ${({ theme }) =>
-              theme.brandColor || COLOR_INTENT_HIGHLIGHT};
+            border-color: ${props => props.theme.COLOR_INTENT_HIGHLIGHT};
           }
         }
       }
@@ -69,13 +61,13 @@ export function formInteractionStyles() {
     &:focus,
     &:focus:active {
       outline: none;
-      border: ${({ theme }) =>
-        css`1px solid ${theme.brandColor || COLOR_INTENT_HIGHLIGHT}`};
-      box-shadow: ${({ theme }) =>
-        css`0 0 0 ${FORM_HIGHLIGHT_SIZE}px ${transparentize(
-          1 - OPACITY_50,
-          theme.brandColor || COLOR_INTENT_HIGHLIGHT
-        )}`};
+      border: ${props => props.theme.COLOR_INTENT_HIGHLIGHT};
+      box-shadow: 0 0 0 ${FORM_HIGHLIGHT_SIZE}px
+        ${props =>
+          transparentize(
+            1 - props.theme.OPACITY_50,
+            props.theme.COLOR_INTENT_HIGHLIGHT
+          )};
     }
 
     &:active {

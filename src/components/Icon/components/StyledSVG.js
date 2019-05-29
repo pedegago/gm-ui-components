@@ -1,12 +1,12 @@
 import styled from "styled-components";
 import { PropTypes } from "prop-types";
-import { ICON_VIEWBOX_SIZE } from "../../../style/styleVariables";
 
 const StyledSVG = styled.svg.attrs({
   version: "1.1",
   xmlns: "http://www.w3.org/2000/svg",
   xmlnsXlink: "http://www.w3.org/1999/xlink",
-  viewBox: `0 0 ${ICON_VIEWBOX_SIZE} ${ICON_VIEWBOX_SIZE}`,
+  viewBox: `0 0 ${props => props.theme.ICON_VIEWBOX_SIZE} ${props =>
+    props.theme.ICON_VIEWBOX_SIZE}`,
   preserveAspectRatio: "xMaxYMax meet"
 })`
   z-index: 1;
