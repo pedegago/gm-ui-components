@@ -1093,7 +1093,7 @@ exports[`Button Snapshots matches type snapshots 2`] = `
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  background-color: #1E6DF6;
+  background-color: hsl(218,92%,54%);
   border-color: transparent;
   color: #fff;
   font-size: 14px;
@@ -1118,7 +1118,7 @@ exports[`Button Snapshots matches type snapshots 2`] = `
 .c0:focus,
 .c0:focus:active {
   outline: none;
-  border: 1px solid #0aab2a;
+  border: 1px solid hsl(135,100%,35%);
   z-index: 10;
   position: relative;
 }
@@ -1207,7 +1207,7 @@ exports[`Button Snapshots matches type snapshots 3`] = `
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  background-color: #0aab2a;
+  background-color: hsl(135,100%,35%);
   border-color: transparent;
   color: #fff;
   font-size: 14px;
@@ -1232,7 +1232,7 @@ exports[`Button Snapshots matches type snapshots 3`] = `
 .c0:focus,
 .c0:focus:active {
   outline: none;
-  border: 1px solid #0aab2a;
+  border: 1px solid hsl(135,100%,35%);
   z-index: 10;
   position: relative;
 }
@@ -1321,7 +1321,7 @@ exports[`Button Snapshots matches type snapshots 4`] = `
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  background-color: #F7CD45;
+  background-color: hsl(46,92%,62%);
   border-color: transparent;
   color: #000;
   font-size: 14px;
@@ -1346,7 +1346,7 @@ exports[`Button Snapshots matches type snapshots 4`] = `
 .c0:focus,
 .c0:focus:active {
   outline: none;
-  border: 1px solid #0aab2a;
+  border: 1px solid hsl(135,100%,35%);
   z-index: 10;
   position: relative;
 }

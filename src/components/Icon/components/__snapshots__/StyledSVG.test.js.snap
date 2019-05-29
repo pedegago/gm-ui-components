@@ -9,7 +9,7 @@ exports[`StyledSVG matches snapshot 1`] = `
         Object {
           "preserveAspectRatio": "xMaxYMax meet",
           "version": "1.1",
-          "viewBox": "0 0 24 24",
+          "viewBox": "0 0 props => props.theme.ICON_VIEWBOX_SIZE props => props.theme.ICON_VIEWBOX_SIZE",
           "xmlns": "http://www.w3.org/2000/svg",
           "xmlnsXlink": "http://www.w3.org/1999/xlink",
         },

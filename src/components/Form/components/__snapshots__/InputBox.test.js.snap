@@ -40,7 +40,7 @@ exports[`InputBox should render 1`] = `
 }
 
 .c0:disabled {
-  background-color: #F8F8F8;
+  background-color: hsl(0,0%,99%);
 }
 
 .c0:valid:required {
@@ -75,7 +75,7 @@ exports[`InputBox should render 1`] = `
 .c0:focus,
 .c0:focus:active {
   outline: none;
-  border: 1px solid hsl(135,100%,35%);
+  border: hsl(135,100%,35%);
   box-shadow: 0 0 0 2.5px rgba(0,179,45,0.5);
 }
 
@@ -112,13 +112,13 @@ exports[`InputBox should render 1`] = `
 }
 
 .c0:disabled {
-  border-color: hsl(0,0%,95%);
+  border-color: hsl(0,0%,97%);
   opacity: 0.5;
   box-shadow: none;
 }
 
 .c0:disabled:checked {
-  background-color: hsl(0,0%,95%);
+  background-color: hsl(0,0%,97%);
 }
 
 <input
