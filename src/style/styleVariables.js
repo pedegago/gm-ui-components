@@ -67,22 +67,22 @@ export const DARK_ON_LIGHT_CONTRAST_ENHANCEMENT_RATIO = 2;
 export const keen = {
   name: "Keen",
 
-  COLOR_BRAND_A: "hsl(135, 100%, 35%)",
-  COLOR_BRAND_B: "hsl(135, 100%, 35%)",
-  COLOR_CONTENT: "hsla(0, 0%, 1%, 0.9)",
+  COLOR_BRAND_A: "hsl(135,100%,35%)",
+  COLOR_BRAND_B: "hsl(135,100%,35%)",
+  COLOR_CONTENT: "hsla(0,0%,1%,0.9)",
 
-  COLOR_BACKGROUND_A: "hsl(0, 0%, 100%)",
-  COLOR_BACKGROUND_B: "hsl(0, 0%, 98.5%)",
-  COLOR_BACKGROUND_C: "hsl(0, 0%, 95%)",
+  COLOR_BACKGROUND_A: "hsl(0,0%,100%)",
+  COLOR_BACKGROUND_B: "hsl(0,0%,99%)",
+  COLOR_BACKGROUND_C: "hsl(0,0%,97%)",
 
-  COLOR_INTENT_HIGHLIGHT: "hsl(135, 100%, 35%)",
-  COLOR_INTENT_SUCCESS: "hsl(135, 100%, 35%)",
-  COLOR_INTENT_DANGER: "hsl(9, 73%, 49%)", // WCAG AA+
-  COLOR_INTENT_WARNING: "hsl(46, 92%, 62%)", // WCAG AA+
-  COLOR_INTENT_INFO: "	hsl(218, 92%, 54%)", // WCAG AA+
+  COLOR_INTENT_HIGHLIGHT: "hsl(135,100%,35%)",
+  COLOR_INTENT_SUCCESS: "hsl(135,100%,35%)",
+  COLOR_INTENT_DANGER: "hsl(9,73%,49%)", // WCAG AA+
+  COLOR_INTENT_WARNING: "hsl(46,92%,62%)", // WCAG AA+
+  COLOR_INTENT_INFO: "hsl(218,92%,54%)", // WCAG AA+
 
-  COLOR_KEYLINE: "hsla(0, 0%, 0%, 0.08)",
-  COLOR_KEYLINE_SOLID: "hsl(0, 0%, 92%)",
+  COLOR_KEYLINE: "hsla(0,0%,0%,0.08)",
+  COLOR_KEYLINE_SOLID: "hsl(0,0%,92%)",
 
   OPACITY_100: "1",
   OPACITY_70: "0.7",
@@ -108,13 +108,13 @@ export const keen = {
   RADIUS_8: "64px", // spacingScale(8)
 
   // TYPOGRAPHY
-  FONTS_SYSTEM: `-apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif`,
-  FONTS_BRAND: `"Avenir Next", "Metropolis", "Helvetica Neue", Arial, sans-serif`,
-  FONTS_CODE: `"SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace`,
+  FONTS_SYSTEM: `-apple-system,BlinkMacSystemFont,"Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue",sans-serif`,
+  FONTS_BRAND: `"Avenir Next","Metropolis","Helvetica Neue",Arial,sans-serif`,
+  FONTS_CODE: `"SFMono-Regular",Consolas,"Liberation Mono",Menlo,Courier,monospace`,
 
-  FONT_STACK_BASE: FONTS_SYSTEM,
-  FONT_STACK_BRAND: FONTS_BRAND,
-  FONT_STACK_CODE: FONTS_CODE,
+  FONT_STACK_BASE: `-apple-system,BlinkMacSystemFont,"Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue",sans-serif`,
+  FONT_STACK_BRAND: `"Avenir Next","Metropolis","Helvetica Neue",Arial,sans-serif`,
+  FONT_STACK_CODE: `"SFMono-Regular",Consolas,"Liberation Mono",Menlo,Courier,monospace`,
 
   FONT_SIZE_HERO: "40px",
   FONT_SIZE_TITLE: "32px",
@@ -133,22 +133,22 @@ export const keen = {
 export const keenDark = {
   name: "KeenDark",
 
-  COLOR_BRAND_A: "hsl(135, 100%, 35%)",
-  COLOR_BRAND_B: "hsl(135, 100%, 35%)",
-  COLOR_CONTENT: "hsla(0, 0%, 100%, 0.875)",
+  COLOR_BRAND_A: "hsl(135,100%,35%)",
+  COLOR_BRAND_B: "hsl(135,100%,35%)",
+  COLOR_CONTENT: "hsla(0,0%,100%,0.875)",
 
-  COLOR_BACKGROUND_A: "hsl(0, 0%, 1%)",
-  COLOR_BACKGROUND_B: "hsl(0, 0%, 10%)",
-  COLOR_BACKGROUND_C: "hsl(0, 0%, 20%)",
+  COLOR_BACKGROUND_A: "hsl(0,0%,1%)",
+  COLOR_BACKGROUND_B: "hsl(0,0%,10%)",
+  COLOR_BACKGROUND_C: "hsl(0,0%,20%)",
 
-  COLOR_INTENT_HIGHLIGHT: "hsl(135, 100%, 35%)",
-  COLOR_INTENT_SUCCESS: "hsl(135, 100%, 35%)",
-  COLOR_INTENT_DANGER: "hsl(9, 73%, 51%)", // WCAG AA+
-  COLOR_INTENT_WARNING: "hsl(46, 92%, 64%)", // WCAG AA+
-  COLOR_INTENT_INFO: "	hsl(218, 92%, 56%)", // WCAG AA+
+  COLOR_INTENT_HIGHLIGHT: "hsl(135,100%,35%)",
+  COLOR_INTENT_SUCCESS: "hsl(135,100%,35%)",
+  COLOR_INTENT_DANGER: "hsl(9,73%,51%)", // WCAG AA+
+  COLOR_INTENT_WARNING: "hsl(46,92%,64%)", // WCAG AA+
+  COLOR_INTENT_INFO: "hsl(218,92%,56%)", // WCAG AA+
 
-  COLOR_KEYLINE: "hsla(0, 0%, 100%, 0.16)",
-  COLOR_KEYLINE_SOLID: "hsl(0, 0%, 24%)",
+  COLOR_KEYLINE: "hsla(0,0%,100%,0.16)",
+  COLOR_KEYLINE_SOLID: "hsl(0,0%,24%)",
 
   OPACITY_100: "1",
   OPACITY_70: "0.7",
@@ -174,13 +174,13 @@ export const keenDark = {
   RADIUS_8: "64px", // spacingScale(8)
 
   // TYPOGRAPHY
-  FONTS_SYSTEM: `-apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif`,
-  FONTS_BRAND: `"Avenir Next", "Metropolis", "Helvetica Neue", Arial, sans-serif`,
-  FONTS_CODE: `"SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace`,
+  FONTS_SYSTEM: `-apple-system,BlinkMacSystemFont,"Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue",sans-serif`,
+  FONTS_BRAND: `"Avenir Next","Metropolis","Helvetica Neue",Arial,sans-serif`,
+  FONTS_CODE: `"SFMono-Regular",Consolas,"Liberation Mono",Menlo,Courier,monospace`,
 
-  FONT_STACK_BASE: FONTS_SYSTEM,
-  FONT_STACK_BRAND: FONTS_BRAND,
-  FONT_STACK_CODE: FONTS_CODE,
+  FONT_STACK_BASE: `-apple-system,BlinkMacSystemFont,"Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue",sans-serif`,
+  FONT_STACK_BRAND: `"Avenir Next","Metropolis","Helvetica Neue",Arial,sans-serif`,
+  FONT_STACK_CODE: `"SFMono-Regular",Consolas,"Liberation Mono",Menlo,Courier,monospace`,
 
   FONT_SIZE_HERO: "40px",
   FONT_SIZE_TITLE: "32px",
