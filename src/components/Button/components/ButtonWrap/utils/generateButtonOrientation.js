@@ -9,7 +9,7 @@ import { spacingScale } from "style/styleFunctions";
  */
 function generateButtonOrientation(
   alignment = "horizontal",
-  spacingBase = props => props.theme.SPACING_BASE
+  spacingBase = 0.5
 ) {
   if (alignment === "horizontal") {
     return `
