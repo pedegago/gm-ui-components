@@ -440,6 +440,12 @@ const GlobalStyles = createGlobalStyle`
   *:after {
     box-sizing: border-box;
   }
+
+  hr {
+    border: 0;
+    border-top: 1px solid;
+    opacity: ${props => props.theme.OPACITY_15};
+  }
 `;
 
 GlobalStyles.defaultProps = {

@@ -32,8 +32,12 @@ const DemoCanvas = styled.div`
   color: ${props => props.theme.COLOR_CONTENT};
 `;
 
-const StyledFieldset = styled(Fieldset)`
+const FieldsetSubtle = styled(Fieldset)`
   background-color: ${props => props.theme.COLOR_BACKGROUND_B};
+`;
+
+const FieldsetContrast = styled(Fieldset)`
+  background-color: ${props => props.theme.COLOR_BACKGROUND_C};
 `;
 
 const Space = styled.span`
@@ -47,6 +51,7 @@ function DemoContent({ themeName }) {
     <DemoCanvas>
       <Breadcrumbs crumbs={["Overview", "Themes", "Theme"]} />
       <Space />
+      <hr />
       <h1>{themeName}</h1>
       <p>
         <IconCog /> Lorem ipsum dolor sit amet. Donec consectetur...
@@ -59,7 +64,7 @@ function DemoContent({ themeName }) {
         <Tab label="Label" />
         <Tab label="Disabled" disabled />
       </TabGroup>
-      <Fieldset>
+      <FieldsetSubtle>
         <Textarea
           autoFocus={false}
           label="Textarea"
@@ -81,16 +86,16 @@ function DemoContent({ themeName }) {
         <Space />
         <Checkbox labelPosition="right" label={"Checkbox"} />
         <Radio labelPosition="right" label={"Radio"} />
-      </Fieldset>
+      </FieldsetSubtle>
 
       <Space />
-      <StyledFieldset>
+      <FieldsetContrast>
         <ButtonGroup>
           <Button label={"Plain Button"} />
           <Space />
           <Button type={"primary"} label={"Primary Button"} />
         </ButtonGroup>
-      </StyledFieldset>
+      </FieldsetContrast>
       <Space />
     </DemoCanvas>
   );

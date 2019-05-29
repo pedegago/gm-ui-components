@@ -1,6 +1,6 @@
 // COLORS
-export const COLOR_BRAND_A = "#00b42b";
-export const COLOR_BRAND_B = "#00b42b";
+export const COLOR_BRAND_A = "hsl(135, 100%, 35%)";
+export const COLOR_BRAND_B = "hsl(135, 100%, 35%)";
 export const COLOR_CONTENT = "#000";
 
 export const COLOR_BACKGROUND_A = "#fff";
@@ -67,22 +67,22 @@ export const DARK_ON_LIGHT_CONTRAST_ENHANCEMENT_RATIO = 2;
 export const keen = {
   name: "Keen",
 
-  COLOR_BRAND_A: "#00b42b",
-  COLOR_BRAND_B: "#00b42b",
-  COLOR_CONTENT: "#000",
+  COLOR_BRAND_A: "hsl(135, 100%, 35%)",
+  COLOR_BRAND_B: "hsl(135, 100%, 35%)",
+  COLOR_CONTENT: "hsla(0, 0%, 1%, 0.9)",
 
-  COLOR_BACKGROUND_A: "#ffffff",
-  COLOR_BACKGROUND_B: "#F8F8F8",
-  COLOR_BACKGROUND_C: "#000000",
+  COLOR_BACKGROUND_A: "hsl(0, 0%, 100%)",
+  COLOR_BACKGROUND_B: "hsl(0, 0%, 98.5%)",
+  COLOR_BACKGROUND_C: "hsl(0, 0%, 95%)",
 
-  COLOR_INTENT_HIGHLIGHT: COLOR_BRAND_A,
-  COLOR_INTENT_SUCCESS: COLOR_BRAND_A,
-  COLOR_INTENT_DANGER: "#D83D22", // WCAG AA+
-  COLOR_INTENT_WARNING: "#F7CD45", // WCAG AA+
-  COLOR_INTENT_INFO: "#1E6DF6", // WCAG AA+
+  COLOR_INTENT_HIGHLIGHT: "hsl(135, 100%, 35%)",
+  COLOR_INTENT_SUCCESS: "hsl(135, 100%, 35%)",
+  COLOR_INTENT_DANGER: "hsl(9, 73%, 49%)", // WCAG AA+
+  COLOR_INTENT_WARNING: "hsl(46, 92%, 62%)", // WCAG AA+
+  COLOR_INTENT_INFO: "	hsl(218, 92%, 54%)", // WCAG AA+
 
-  COLOR_KEYLINE: "rgba(0,0,0,0.08)",
-  COLOR_KEYLINE_SOLID: "#EBEBEB",
+  COLOR_KEYLINE: "hsla(0, 0%, 0%, 0.08)",
+  COLOR_KEYLINE_SOLID: "hsl(0, 0%, 92%)",
 
   OPACITY_100: "1",
   OPACITY_70: "0.7",
@@ -90,7 +90,7 @@ export const keen = {
   OPACITY_15: "0.15",
 
   // LAYOUT
-  BORDER_RADIUS_BASE: "3px", // Will be changed to 4px
+  BORDER_RADIUS_BASE: "4px", // Will be changed to 4px
   SPACING_BASE: 8,
   ICON_VIEWBOX_SIZE: 24, // Move to Icons component?
 
@@ -117,12 +117,12 @@ export const keen = {
   FONT_STACK_CODE: FONTS_CODE,
 
   FONT_SIZE_HERO: "40px",
-  FONT_SIZE_TITLE: "36px", // Will be changed to 32px
-  FONT_SIZE_LG: "18px", // Will be changed to 24px
-  FONT_SIZE_MD: "16px", // Will be changed to 18px
+  FONT_SIZE_TITLE: "32px",
+  FONT_SIZE_LG: "24px",
+  FONT_SIZE_MD: "18px",
   FONT_SIZE_BASE: "14px",
-  FONT_SIZE_SM: "11px", // Will be changed to 12px
-  FONT_SIZE_XS: "9px", // Will be changed to 10px
+  FONT_SIZE_SM: "12px",
+  FONT_SIZE_XS: "10px",
 
   LINE_HEIGHT_BASE: 1.4,
   FONT_WEIGHT_BASE: 400,
@@ -133,22 +133,22 @@ export const keen = {
 export const keenDark = {
   name: "KeenDark",
 
-  COLOR_BRAND_A: "#00b42b",
-  COLOR_BRAND_B: "#00b42b",
-  COLOR_CONTENT: "#FFF",
+  COLOR_BRAND_A: "hsl(135, 100%, 35%)",
+  COLOR_BRAND_B: "hsl(135, 100%, 35%)",
+  COLOR_CONTENT: "hsla(0, 0%, 100%, 0.875)",
 
-  COLOR_BACKGROUND_A: "#000000",
-  COLOR_BACKGROUND_B: "#222222",
-  COLOR_BACKGROUND_C: "#FFFFFF",
+  COLOR_BACKGROUND_A: "hsl(0, 0%, 1%)",
+  COLOR_BACKGROUND_B: "hsl(0, 0%, 10%)",
+  COLOR_BACKGROUND_C: "hsl(0, 0%, 20%)",
 
-  COLOR_INTENT_HIGHLIGHT: COLOR_BRAND_A,
-  COLOR_INTENT_SUCCESS: COLOR_BRAND_A,
-  COLOR_INTENT_DANGER: "#D83D22", // WCAG AA+
-  COLOR_INTENT_WARNING: "#F7CD45", // WCAG AA+
-  COLOR_INTENT_INFO: "#1E6DF6", // WCAG AA+
+  COLOR_INTENT_HIGHLIGHT: "hsl(135, 100%, 35%)",
+  COLOR_INTENT_SUCCESS: "hsl(135, 100%, 35%)",
+  COLOR_INTENT_DANGER: "hsl(9, 73%, 51%)", // WCAG AA+
+  COLOR_INTENT_WARNING: "hsl(46, 92%, 64%)", // WCAG AA+
+  COLOR_INTENT_INFO: "	hsl(218, 92%, 56%)", // WCAG AA+
 
-  COLOR_KEYLINE: "rgba(255,255,255,0.16)",
-  COLOR_KEYLINE_SOLID: "#292929",
+  COLOR_KEYLINE: "hsla(0, 0%, 100%, 0.16)",
+  COLOR_KEYLINE_SOLID: "hsl(0, 0%, 24%)",
 
   OPACITY_100: "1",
   OPACITY_70: "0.7",
@@ -156,7 +156,7 @@ export const keenDark = {
   OPACITY_15: "0.15",
 
   // LAYOUT
-  BORDER_RADIUS_BASE: "3px", // Will be changed to 4px
+  BORDER_RADIUS_BASE: "4px", // Will be changed to 4px
   SPACING_BASE: 8,
   ICON_VIEWBOX_SIZE: 24, // Move to Icons component?
 
@@ -183,12 +183,12 @@ export const keenDark = {
   FONT_STACK_CODE: FONTS_CODE,
 
   FONT_SIZE_HERO: "40px",
-  FONT_SIZE_TITLE: "36px", // Will be changed to 32px
-  FONT_SIZE_LG: "18px", // Will be changed to 24px
-  FONT_SIZE_MD: "16px", // Will be changed to 18px
+  FONT_SIZE_TITLE: "32px",
+  FONT_SIZE_LG: "24px",
+  FONT_SIZE_MD: "18px",
   FONT_SIZE_BASE: "14px",
-  FONT_SIZE_SM: "11px", // Will be changed to 12px
-  FONT_SIZE_XS: "9px", // Will be changed to 10px
+  FONT_SIZE_SM: "12px",
+  FONT_SIZE_XS: "10px",
 
   LINE_HEIGHT_BASE: 1.4,
   FONT_WEIGHT_BASE: 400,
