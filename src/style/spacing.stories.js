@@ -8,13 +8,12 @@ const stories = storiesOf(" Overview|Spacing", module);
 
 const SpacedObject = styled.div`
   box-sizing: content-box;
-  border-bottom: 1px solid;
-  border-left: 1px solid;
-  border-right: 1px solid;
+  transition: all 0.2s ease;
+  border-bottom: 1px solid currentColor;
+  border-left: 1px solid currentColor;
+  border-right: 1px solid currentColor;
   height: ${spacing(2)};
   width: ${props => spacing(props.spacing)};
-
-  transition: all 0.2s ease;
 `;
 
 stories.add("Spacing", () => <SpacedObject spacing={number("spacing", 1)} />);
