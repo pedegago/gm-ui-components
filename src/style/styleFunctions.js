@@ -14,6 +14,23 @@ export function spacingScale(factor) {
   `;
 }
 
+/**
+ * Scales a value of a certain according to the app's SPACING_SCALE via rem units
+ *
+ * @export
+ * @param {number} factor
+ * @returns {number} A value in the format "2rem"
+ */
+
+export function spacing(factor) {
+  if (factor > 0) {
+    return Math.pow(2, factor) / 16 + "rem";
+  } else {
+    factor = factor * -1;
+    return "-" + Math.pow(2, factor) / 16 + "rem";
+  }
+}
+
 // Darken the color, but add a touch of saturation for a more natural shadow look
 export function darkenColor(color, percent) {
   if (parseToHsl(color).saturation > 0.1) {
