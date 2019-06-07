@@ -1,23 +1,15 @@
-import styled from "styled-components";
 import React from "react";
 import { storiesOf } from "@storybook/react";
-import { object, text } from "@storybook/addon-knobs";
+import { object, text, array } from "@storybook/addon-knobs";
 
-import {
-  ButtonGroup,
-  IconCog,
-  Button,
-  AppHeader,
-  Breadcrumbs
-} from "components";
-import { spacingScale } from "style/styleFunctions";
+import { IconCog, Button, AppHeader, Breadcrumbs } from "components";
 
 const stories = storiesOf("Components|App Header", module);
 
-const bannerExtras = [
+const extras = [
   {
-    path: "/settings",
-    title: "Extra, Extra, Read all about it"
+    path: "/",
+    title: "More Information"
   }
 ];
 
@@ -27,10 +19,6 @@ const breadcrumbs = [
   "Routes",
   "Grace Hopper Battleship Service"
 ];
-
-const ToolbarButtonGroup = styled(ButtonGroup)`
-  padding: ${spacingScale(0)} ${spacingScale(1)};
-`;
 
 const toolbarItems = () => {
   return (
@@ -42,23 +30,11 @@ const toolbarItems = () => {
         flex: "1 1 auto"
       }}
     >
-      <Breadcrumbs crumbs={breadcrumbs} />
-      <span>1.1.6</span>
-      <ToolbarButtonGroup style={{ paddingRight: 0 }}>
-        <Button
-          outline={false}
-          size="xs"
-          label=""
-          type="info"
-          style={{
-            border: "none",
-            backgroundColor: "white",
-            color: "black"
-          }}
-        >
-          <IconCog size={"24px"} />
-        </Button>
-      </ToolbarButtonGroup>
+      <Breadcrumbs crumbs={array("breadcrumbs", breadcrumbs)} />
+      &nbsp;
+      <Button size="xs">
+        <IconCog />
+      </Button>
     </div>
   );
 };
@@ -68,8 +44,8 @@ stories.add(
   () => {
     return (
       <AppHeader
-        title={text("title", "GM UI App Header")}
-        extras={object("extras", bannerExtras)}
+        title={text("title", "Page Title")}
+        extras={object("extras", extras)}
         toolbarItems={toolbarItems}
       />
     );
@@ -77,7 +53,7 @@ stories.add(
   {
     info: {
       text:
-        "An AppHeader component that renders a title and other various toolbarItems that you can render by providing a render function."
+        "A component that renders a masthead with a title, as well as various toolbar items that you can render by providing a render function."
     }
   }
 );

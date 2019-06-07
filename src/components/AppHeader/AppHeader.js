@@ -1,8 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-import { keenDark } from "style/theme";
-
 import HeaderWrapper from "./components/HeaderWrapper";
 import HeaderToolbar from "./components/HeaderToolbar";
 import HeaderBanner from "./components/HeaderBanner";
