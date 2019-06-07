@@ -5,12 +5,6 @@ import HeaderWrapper from "./components/HeaderWrapper";
 import HeaderToolbar from "./components/HeaderToolbar";
 import HeaderBanner from "./components/HeaderBanner";
 
-AppHeader.propTypes = {
-  extras: PropTypes.array,
-  title: PropTypes.string.isRequired,
-  toolbarItems: PropTypes.func
-};
-
 /**
  * Stateless functional React component that renders the App Header
  * @returns JSX.Element
@@ -24,6 +18,17 @@ function AppHeader({ title, extras = [], toolbarItems, ...props }) {
     </HeaderWrapper>
   );
 }
+
+AppHeader.propTypes = {
+  extras: PropTypes.array,
+  title: PropTypes.string.isRequired,
+  toolbarItems: PropTypes.func
+};
+
+AppHeader.defaultProps = {
+  extras: null,
+  toolbarItems: null
+};
 
 AppHeader.displayName = "AppHeader";
 

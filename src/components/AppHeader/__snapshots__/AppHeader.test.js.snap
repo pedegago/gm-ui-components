@@ -65,6 +65,7 @@ exports[`AppHeader component matches snapshot 1`] = `
         },
       ]
     }
+    hideBackground={false}
     title="GM UI AppHeader"
   />
 </HeaderWrapper>
