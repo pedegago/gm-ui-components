@@ -6,6 +6,7 @@ export { default as ButtonGroup } from "./ButtonGroup";
 export { default as Checkbox } from "./Checkbox";
 export { default as Collapse } from "./Collapse";
 export { default as ErrorCard } from "./ErrorCard";
+export { default as HStack } from "./HStack";
 export { default as Icon } from "./Icon";
 export { default as InputField } from "./InputField";
 export { default as InputRange } from "./InputRange";
